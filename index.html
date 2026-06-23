@@ -1,31 +1,495 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Pioneer Works</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pioneer Works Limited</title>
+  <meta name="description" content="Pioneer Works Limited provides painting, fencing, decks, property maintenance, home improvements and handyman services across Auckland, Waikato and Bay of Plenty.">
+
+  <style>
+    :root {
+      --blue: #003f8f;
+      --deep-blue: #002b63;
+      --black: #111111;
+      --gold: #c9962b;
+      --white: #ffffff;
+      --light: #f5f7fb;
+      --text: #222222;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--white);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .top-bar {
+      background: var(--deep-blue);
+      color: white;
+      padding: 10px 20px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    header {
+      background: white;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e5e5e5;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand img {
+      height: 70px;
+      width: auto;
+    }
+
+    .brand-title {
+      font-size: 22px;
+      font-weight: bold;
+      color: var(--deep-blue);
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      margin-left: 18px;
+      color: var(--black);
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .quote-btn {
+      background: var(--gold);
+      color: white !important;
+      padding: 12px 18px;
+      border-radius: 6px;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0, 43, 99, 0.88), rgba(0, 43, 99, 0.88)),
+        url("hero.jpg");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 90px 20px;
+    }
+
+    .hero-content {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      line-height: 1.1;
+      margin: 0 0 20px;
+      max-width: 650px;
+    }
+
+    .hero p {
+      font-size: 19px;
+      max-width: 700px;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: white;
+      padding: 14px 24px;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .btn-secondary {
+      border: 2px solid white;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 70px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      color: var(--deep-blue);
+      font-size: 34px;
+      margin-bottom: 15px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      color: #555;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .service-card {
+      background: var(--light);
+      border: 1px solid #e2e8f0;
+      padding: 28px;
+      border-radius: 12px;
+      text-align: center;
+      transition: 0.2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+    }
+
+    .service-card h3 {
+      color: var(--deep-blue);
+      margin-bottom: 10px;
+    }
+
+    .promise {
+      background: var(--light);
+    }
+
+    .promise-box {
+      background: white;
+      border-left: 5px solid var(--gold);
+      padding: 35px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    }
+
+    .values {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .value {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .value strong {
+      color: var(--deep-blue);
+    }
+
+    .why {
+      background: var(--deep-blue);
+      color: white;
+      text-align: center;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .why-item {
+      padding: 20px;
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 10px;
+    }
+
+    .contact {
+      text-align: center;
+      background: white;
+    }
+
+    .contact-boxes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .contact-box {
+      background: var(--light);
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .contact-box a {
+      color: var(--deep-blue);
+      font-weight: bold;
+    }
+
+    footer {
+      background: var(--deep-blue);
+      color: white;
+      padding: 45px 20px 20px;
+    }
+
+    .footer-grid {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+    }
+
+    footer h3 {
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    footer p, footer a {
+      color: #e8eef8;
+      font-size: 14px;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      margin-top: 30px;
+      padding-top: 18px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav {
+        text-align: center;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 7px;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .brand img {
+        height: 60px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<h1>Pioneer Works</h1>
+  <div class="top-bar">
+    Servicing Auckland • Waikato • Bay of Plenty | 020 4510 601 | info@pioneerworks.co.nz
+  </div>
 
-<h2>Reliable Work. Done Right.</h2>
+  <header>
+    <div class="brand">
+      <img src="logo.png" alt="Pioneer Works Limited Logo">
+      <div class="brand-title">Pioneer Works Limited</div>
+    </div>
 
-<p>
-Painting • Fencing • Decks • Property Maintenance •
-Home Improvements • Handyman Services
-</p>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="quote-btn">Free Quote</a>
+    </nav>
+  </header>
 
-<p>
-Servicing Auckland • Waikato • Bay of Plenty
-</p>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Reliable Work. Done Right.</h1>
+      <p>
+        Professional painting, fencing, decks, property maintenance,
+        home improvements and handyman services across Auckland,
+        Waikato and Bay of Plenty.
+      </p>
 
-<p>
-Phone: 020 4510 601
-</p>
+      <div class="buttons">
+        <a href="tel:0204510601" class="btn-primary">Call 020 4510 601</a>
+        <a href="mailto:info@pioneerworks.co.nz" class="btn-secondary">Request a Free Quote</a>
+      </div>
+    </div>
+  </section>
 
-<p>
-Email: info@pioneerworks.co.nz
-</p>
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Services We Provide</h2>
+      <p class="section-subtitle">
+        Complete property solutions for homes, rentals and commercial spaces.
+      </p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Painting</h3>
+          <p>Interior and exterior painting with a clean, professional finish.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Fencing</h3>
+          <p>Fence repairs, new fencing, maintenance and improvements.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Decks</h3>
+          <p>Deck building, restoration, repairs, staining and maintenance.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Property Maintenance</h3>
+          <p>Reliable maintenance to keep your property in good condition.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>General Repairs</h3>
+          <p>Practical repair solutions for residential and commercial properties.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Home Improvements</h3>
+          <p>Improving spaces with care, detail and reliable workmanship.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Handyman Services</h3>
+          <p>Small jobs, repairs, installations and practical property help.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>And More</h3>
+          <p>If you need something not listed, get in touch. We may be able to help.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="promise" id="about">
+    <div class="container">
+      <div class="promise-box">
+        <h2 class="section-title">Built on Trust. Guided by Values.</h2>
+        <p>
+          At Pioneer Works Limited, we believe in honest service, reliable
+          workmanship and practical solutions. Our blue, black and gold brand
+          colours represent flow, protection, strength, stability and success.
+        </p>
+
+        <div class="values">
+          <div class="value"><strong>Reliable</strong><br>We do what we say we will do.</div>
+          <div class="value"><strong>Respectful</strong><br>We treat your property with care.</div>
+          <div class="value"><strong>Quality</strong><br>We take pride in every job.</div>
+          <div class="value"><strong>Practical</strong><br>We provide useful, honest solutions.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why">
+    <div class="container">
+      <h2>Why Choose Pioneer Works Limited?</h2>
+
+      <div class="why-grid">
+        <div class="why-item">Quality Workmanship</div>
+        <div class="why-item">Reliable Service</div>
+        <div class="why-item">Free Quotes</div>
+        <div class="why-item">Residential & Commercial</div>
+        <div class="why-item">Auckland • Waikato • Bay of Plenty</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="section-title">Request a Free Quote</h2>
+      <p class="section-subtitle">
+        Need painting, fencing, decking, maintenance or handyman help?
+        Contact Pioneer Works Limited today.
+      </p>
+
+      <div class="contact-boxes">
+        <div class="contact-box">
+          <h3>Phone</h3>
+          <a href="tel:0204510601">020 4510 601</a>
+        </div>
+
+        <div class="contact-box">
+          <h3>Email</h3>
+          <a href="mailto:info@pioneerworks.co.nz">info@pioneerworks.co.nz</a>
+        </div>
+
+        <div class="contact-box">
+          <h3>Service Areas</h3>
+          <p>Auckland • Waikato • Bay of Plenty</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h3>Pioneer Works Limited</h3>
+        <p>
+          Painting, fencing, decks, property maintenance, home improvements
+          and handyman services.
+        </p>
+      </div>
+
+      <div>
+        <h3>Services</h3>
+        <p>Painting</p>
+        <p>Fencing</p>
+        <p>Decks</p>
+        <p>Property Maintenance</p>
+        <p>Handyman Services</p>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p>020 4510 601</p>
+        <p>info@pioneerworks.co.nz</p>
+        <p>pioneerworks.co.nz</p>
+      </div>
+    </div>
+
+    <div class="copyright">
+      © 2026 Pioneer Works Limited. All rights reserved.
+    </div>
+  </footer>
 
 </body>
 </html>
