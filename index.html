@@ -4,20 +4,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Pioneer Works Limited | Property Services NZ</title>
+  <title>Pioneer Works Limited | Painting, Fencing, Decks & Property Maintenance</title>
   <meta name="description" content="Pioneer Works Limited provides painting, fencing, decks, property maintenance, home improvements and handyman services across Auckland, Waikato and Bay of Plenty.">
 
   <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
+
+  <style>
+    .hero{
+      background:
+        linear-gradient(90deg, rgba(0,31,77,0.96) 0%, rgba(0,43,99,0.88) 45%, rgba(0,43,99,0.35) 100%),
+        url("hero-home.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .why-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:24px;
+    }
+
+    .why-card{
+      color:white;
+      border-right:1px solid rgba(255,255,255,0.25);
+      padding:25px;
+      text-align:center;
+    }
+
+    .why-card h3{
+      color:white;
+    }
+
+    .why-card p{
+      color:#e5edf8;
+    }
+  </style>
 </head>
 
 <body>
 
   <div class="top-bar">
     <div class="top-bar-inner">
-      <span>Servicing Auckland • Waikato • Bay of Plenty</span>
-      <span>info@pioneerworks.co.nz</span>
-      <span>020 4510 601</span>
+      <span>📍 Servicing Auckland • Waikato • Bay of Plenty</span>
+      <span>✉ info@pioneerworks.co.nz</span>
+      <span>☎ 020 4510 601</span>
     </div>
   </div>
 
@@ -31,8 +61,9 @@
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="gallery.html">Our Work & Testimonials</a>
-        <a href="quote.html" class="quote-btn">Request Quote</a>
-        <a href="contact.html">Contact</a>
+        <a href="quote.html">Request Quote</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="quote.html" class="quote-btn">Get a Free Quote</a>
       </nav>
     </div>
   </header>
@@ -40,18 +71,20 @@
   <section class="hero">
     <div class="hero-inner">
       <p class="company-name">Pioneer Works Limited</p>
+
       <h1>Reliable Work.<br>Done Right.</h1>
+
       <div class="gold-line"></div>
 
       <p>
         Professional painting, fencing, decks, property maintenance,
-        home improvements and handyman services across Auckland, Waikato
-        and Bay of Plenty.
+        home improvements and handyman services you can trust across
+        Auckland, Waikato and Bay of Plenty.
       </p>
 
       <div class="hero-buttons">
         <a href="quote.html" class="btn-primary">Get a Free Quote</a>
-        <a href="tel:0204510601" class="btn-secondary">Call 020 4510 601</a>
+        <a href="tel:0204510601" class="btn-secondary">020 4510 601</a>
       </div>
 
       <div class="hero-features">
@@ -67,43 +100,42 @@
       <p class="section-label">Our Services</p>
       <h2 class="section-title">Complete Property Solutions</h2>
       <p class="section-subtitle">
-        One trusted team for painting, fencing, decks, property maintenance,
-        repairs and improvements.
+        One trusted team for painting, fencing, decks, property maintenance, repairs and improvements.
       </p>
 
       <div class="services-grid">
         <div class="service-card">
           <div class="service-icon">🎨</div>
           <h3>Painting</h3>
-          <p>Interior, exterior, touch-ups, fence painting and fresh finishes.</p>
+          <p>Interior and exterior painting, touch-ups, fence painting and fresh property finishes.</p>
           <a href="services.html">View Services →</a>
         </div>
 
         <div class="service-card">
           <div class="service-icon">🚧</div>
           <h3>Fencing</h3>
-          <p>Fence repairs, timber fencing, gates, privacy fencing and maintenance.</p>
+          <p>Fence repairs, timber fencing, privacy fencing, gates and maintenance.</p>
           <a href="services.html">View Services →</a>
         </div>
 
         <div class="service-card">
           <div class="service-icon">🪵</div>
           <h3>Decks</h3>
-          <p>Deck repairs, restoration, staining, maintenance and upgrades.</p>
+          <p>Deck repairs, restoration, staining, maintenance and outdoor living improvements.</p>
           <a href="services.html">View Services →</a>
         </div>
 
         <div class="service-card">
           <div class="service-icon">🏡</div>
-          <h3>Maintenance</h3>
-          <p>Rental upkeep, property care, repairs and practical improvements.</p>
+          <h3>Property Maintenance</h3>
+          <p>Rental upkeep, property care, general repairs and practical improvements.</p>
           <a href="services.html">View Services →</a>
         </div>
 
         <div class="service-card">
           <div class="service-icon">🛠️</div>
-          <h3>Handyman Work</h3>
-          <p>Small jobs, general repairs, installations and property help.</p>
+          <h3>Handyman Services</h3>
+          <p>Small jobs, installations, repairs and reliable help around your property.</p>
           <a href="services.html">View Services →</a>
         </div>
       </div>
@@ -119,16 +151,15 @@
 
         <div class="promise-content">
           <p class="section-label" style="text-align:left;">Our Promise</p>
-          <h2>Built on Trust. Guided by Quality.</h2>
+          <h2>Built on Trust. Guided by Values.</h2>
           <p>
-            Pioneer Works Limited is focused on reliable workmanship, clear
-            communication and respectful service. Whether it is a small repair
-            or a larger property improvement project, we aim to make the process
-            simple and professional.
+            At Pioneer Works Limited, we focus on reliable workmanship, clear communication
+            and respectful service. Whether it is a small repair or a larger property improvement
+            project, we aim to make the process simple and professional.
           </p>
 
           <div class="values-grid">
-            <div class="value-card"><strong>Reliable</strong><br>We keep things clear.</div>
+            <div class="value-card"><strong>Reliable</strong><br>We keep things clear and simple.</div>
             <div class="value-card"><strong>Quality</strong><br>We take pride in the finish.</div>
             <div class="value-card"><strong>Respectful</strong><br>We care for your property.</div>
             <div class="value-card"><strong>Practical</strong><br>We help solve the problem.</div>
@@ -142,10 +173,6 @@
     <div class="container">
       <p class="section-label">Why Choose Us</p>
       <h2 class="section-title">Professional, Reliable and Easy to Deal With</h2>
-      <p class="section-subtitle">
-        We help homeowners, landlords, property managers and businesses complete
-        property work with confidence.
-      </p>
 
       <div class="why-grid">
         <div class="why-card">
@@ -176,10 +203,10 @@
       <div class="areas-box">
         <div>
           <p class="section-label" style="text-align:left;">Service Areas</p>
-          <h2>Servicing the Upper North Island</h2>
+          <h2>Servicing Auckland, Waikato & Bay of Plenty</h2>
           <p>
-            We provide the same professional service across our main service
-            regions, subject to project size, timing and availability.
+            Pioneer Works Limited provides property improvement and maintenance services
+            across key regions in the upper North Island.
           </p>
         </div>
 
@@ -190,45 +217,10 @@
         </div>
 
         <div class="quote-panel">
-          <h3>Need a Quote?</h3>
-          <p>Tell us what you need and we will get back to you.</p>
-          <a href="quote.html" class="btn-primary">Request Quote</a>
+          <h3>Ready to start your project?</h3>
+          <p>Contact us today for a free quote and expert advice.</p>
+          <a href="quote.html" class="btn-primary">Get a Free Quote</a>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="testimonials">
-    <div class="container">
-      <p class="section-label">Our Work & Testimonials</p>
-      <h2 class="section-title">Project Photos and Reviews Coming Soon</h2>
-      <p class="section-subtitle">
-        As Pioneer Works Limited completes more projects, this section will
-        showcase completed work, before-and-after photos and customer feedback.
-      </p>
-
-      <div class="testimonial-grid">
-        <div class="testimonial">
-          <div class="stars">★★★★★</div>
-          <p>“Reliable, professional and easy to deal with.”</p>
-          <strong>Customer Review</strong>
-        </div>
-
-        <div class="testimonial">
-          <div class="stars">★★★★★</div>
-          <p>“Great workmanship and clear communication.”</p>
-          <strong>Customer Review</strong>
-        </div>
-
-        <div class="testimonial">
-          <div class="stars">★★★★★</div>
-          <p>“Friendly service and quality results.”</p>
-          <strong>Customer Review</strong>
-        </div>
-      </div>
-
-      <div class="hero-buttons" style="justify-content:center; margin-top:35px;">
-        <a href="gallery.html" class="btn-primary">View Our Work</a>
       </div>
     </div>
   </section>
@@ -258,12 +250,12 @@
       </div>
 
       <div>
-        <h3>Pages</h3>
+        <h3>Quick Links</h3>
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="gallery.html">Our Work & Testimonials</a>
         <a href="quote.html">Request Quote</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html">Contact Us</a>
       </div>
 
       <div>
@@ -286,7 +278,8 @@
     </div>
 
     <div class="copyright">
-      © 2026 Pioneer Works Limited. All rights reserved. | <a href="privacy.html">Privacy Policy</a>
+      © 2026 Pioneer Works Limited. All rights reserved. |
+      <a href="privacy.html">Privacy Policy</a>
     </div>
   </footer>
 
