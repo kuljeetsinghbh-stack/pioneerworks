@@ -84,7 +84,7 @@
     }
 
     .hero {
-      background: linear-gradient(120deg, rgba(0,43,99,0.96), rgba(0,63,143,0.9));
+      background: linear-gradient(120deg, rgba(0,43,99,0.97), rgba(0,63,143,0.9));
       color: white;
       padding: 95px 20px;
     }
@@ -97,13 +97,13 @@
     .hero h1 {
       font-size: 56px;
       line-height: 1.08;
-      max-width: 680px;
+      max-width: 720px;
       margin-bottom: 20px;
     }
 
     .hero p {
       font-size: 20px;
-      max-width: 760px;
+      max-width: 780px;
       margin-bottom: 28px;
     }
 
@@ -166,8 +166,7 @@
     .services-grid,
     .why-grid,
     .process-grid,
-    .testimonial-grid,
-    .region-grid {
+    .testimonial-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 22px;
@@ -175,8 +174,7 @@
 
     .service-card,
     .why-card,
-    .testimonial,
-    .region-card {
+    .testimonial {
       background: white;
       border: 1px solid #e5eaf2;
       border-radius: 14px;
@@ -185,16 +183,14 @@
     }
 
     .service-card h3,
-    .why-card h3,
-    .region-card h3 {
+    .why-card h3 {
       color: var(--deep-blue);
       margin-bottom: 10px;
       font-size: 22px;
     }
 
     .service-card p,
-    .why-card p,
-    .region-card p {
+    .why-card p {
       color: var(--muted);
       margin-bottom: 16px;
     }
@@ -206,7 +202,7 @@
 
     .why-section,
     .testimonials,
-    .region-section {
+    .areas-section {
       background: var(--light);
     }
 
@@ -237,28 +233,35 @@
       font-weight: bold;
     }
 
-    .service-list-box {
+    .areas-box {
       background: white;
-      border-radius: 16px;
-      padding: 35px;
+      border-radius: 18px;
+      padding: 42px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.06);
       border: 1px solid #e5eaf2;
-      margin-top: 35px;
+      text-align: center;
     }
 
-    .service-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    .areas-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 14px;
-      margin-top: 20px;
+      margin-top: 24px;
     }
 
-    .service-list div {
+    .areas-list span {
       background: var(--soft-blue);
-      padding: 14px 16px;
-      border-radius: 8px;
       color: var(--deep-blue);
+      padding: 14px 22px;
+      border-radius: 999px;
       font-weight: bold;
+    }
+
+    .services-line {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 17px;
     }
 
     .stars {
@@ -371,6 +374,10 @@
 
       .top-bar {
         font-size: 12px;
+      }
+
+      .areas-box {
+        padding: 28px 20px;
       }
     }
   </style>
@@ -533,45 +540,25 @@
     </div>
   </section>
 
-  <section class="region-section">
+  <section class="areas-section">
     <div class="container">
-      <p class="section-label">Service Areas</p>
-      <h2 class="section-title">Regions We Service</h2>
-      <p class="section-subtitle">
-        Pioneer Works Limited provides the same full range of property services across Auckland, Waikato and Bay of Plenty.
-      </p>
+      <div class="areas-box">
+        <p class="section-label">Service Areas</p>
+        <h2 class="section-title">Areas We Service</h2>
+        <p class="section-subtitle">
+          Pioneer Works Limited provides property improvement and maintenance services across key regions in the upper North Island.
+        </p>
 
-      <div class="region-grid">
-        <div class="region-card">
-          <h3>Auckland</h3>
-          <p>Available for painting, fencing, decks, property maintenance, home improvements, general repairs and handyman services.</p>
+        <div class="areas-list">
+          <span>Auckland</span>
+          <span>Waikato</span>
+          <span>Bay of Plenty</span>
         </div>
 
-        <div class="region-card">
-          <h3>Waikato</h3>
-          <p>Available for painting, fencing, decks, property maintenance, home improvements, general repairs and handyman services.</p>
-        </div>
-
-        <div class="region-card">
-          <h3>Bay of Plenty</h3>
-          <p>Available for painting, fencing, decks, property maintenance, home improvements, general repairs and handyman services.</p>
-        </div>
-      </div>
-
-      <div class="service-list-box">
-        <p class="section-label">Services Available Across All Regions</p>
-        <h2 class="section-title">What We Can Help With</h2>
-
-        <div class="service-list">
-          <div>Painting</div>
-          <div>Fencing</div>
-          <div>Decks</div>
-          <div>Property Maintenance</div>
-          <div>General Repairs</div>
-          <div>Home Improvements</div>
-          <div>Handyman Services</div>
-          <div>And More</div>
-        </div>
+        <p class="services-line">
+          Services available across these regions include painting, fencing, decks,
+          property maintenance, general repairs, home improvements and handyman services.
+        </p>
       </div>
     </div>
   </section>
