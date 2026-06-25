@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Pioneer Works Limited | Painting, Fencing, Decks & Property Maintenance</title>
+  <title>Pioneer Works Limited | Property Services NZ</title>
   <meta name="description" content="Pioneer Works Limited provides painting, fencing, decks, property maintenance, home improvements and handyman services across Auckland, Waikato and Bay of Plenty.">
 
   <link rel="stylesheet" href="styles.css">
@@ -12,31 +12,25 @@
   <style>
     .hero{
       background:
-        linear-gradient(90deg, rgba(0,31,77,0.96) 0%, rgba(0,43,99,0.88) 45%, rgba(0,43,99,0.35) 100%),
-        url("hero-home.jpg");
+        linear-gradient(90deg, rgba(0,31,77,0.96) 0%, rgba(0,43,99,0.88) 45%, rgba(0,43,99,0.25) 100%),
+        url("hero-home.jpeg");
       background-size: cover;
-      background-position: center;
+      background-position: center right;
     }
 
-    .why-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:24px;
-    }
-
-    .why-card{
-      color:white;
-      border-right:1px solid rgba(255,255,255,0.25);
-      padding:25px;
-      text-align:center;
-    }
-
-    .why-card h3{
-      color:white;
-    }
-
-    .why-card p{
-      color:#e5edf8;
+    .service-number{
+      width:48px;
+      height:48px;
+      border:2px solid var(--gold);
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin:0 auto 18px;
+      color:var(--gold);
+      font-weight:800;
+      font-size:15px;
+      letter-spacing:1px;
     }
   </style>
 </head>
@@ -45,9 +39,9 @@
 
   <div class="top-bar">
     <div class="top-bar-inner">
-      <span>📍 Servicing Auckland • Waikato • Bay of Plenty</span>
-      <span>✉ info@pioneerworks.co.nz</span>
-      <span>☎ 020 4510 601</span>
+      <span>Servicing Auckland • Waikato • Bay of Plenty</span>
+      <span>info@pioneerworks.co.nz</span>
+      <span>020 4510 601</span>
     </div>
   </div>
 
@@ -71,9 +65,7 @@
   <section class="hero">
     <div class="hero-inner">
       <p class="company-name">Pioneer Works Limited</p>
-
       <h1>Reliable Work.<br>Done Right.</h1>
-
       <div class="gold-line"></div>
 
       <p>
@@ -105,35 +97,35 @@
 
       <div class="services-grid">
         <div class="service-card">
-          <div class="service-icon">🎨</div>
+          <div class="service-number">01</div>
           <h3>Painting</h3>
           <p>Interior and exterior painting, touch-ups, fence painting and fresh property finishes.</p>
           <a href="services.html">View Services →</a>
         </div>
 
         <div class="service-card">
-          <div class="service-icon">🚧</div>
+          <div class="service-number">02</div>
           <h3>Fencing</h3>
           <p>Fence repairs, timber fencing, privacy fencing, gates and maintenance.</p>
           <a href="services.html">View Services →</a>
         </div>
 
         <div class="service-card">
-          <div class="service-icon">🪵</div>
+          <div class="service-number">03</div>
           <h3>Decks</h3>
           <p>Deck repairs, restoration, staining, maintenance and outdoor living improvements.</p>
           <a href="services.html">View Services →</a>
         </div>
 
         <div class="service-card">
-          <div class="service-icon">🏡</div>
+          <div class="service-number">04</div>
           <h3>Property Maintenance</h3>
           <p>Rental upkeep, property care, general repairs and practical improvements.</p>
           <a href="services.html">View Services →</a>
         </div>
 
         <div class="service-card">
-          <div class="service-icon">🛠️</div>
+          <div class="service-number">05</div>
           <h3>Handyman Services</h3>
           <p>Small jobs, installations, repairs and reliable help around your property.</p>
           <a href="services.html">View Services →</a>
@@ -146,7 +138,7 @@
     <div class="container">
       <div class="promise-wrap">
         <div class="promise-image">
-          <span>🏠</span>
+          <span>PW</span>
         </div>
 
         <div class="promise-content">
@@ -221,6 +213,41 @@
           <p>Contact us today for a free quote and expert advice.</p>
           <a href="quote.html" class="btn-primary">Get a Free Quote</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="container">
+      <p class="section-label">Our Work & Testimonials</p>
+      <h2 class="section-title">Project Photos and Reviews Coming Soon</h2>
+      <p class="section-subtitle">
+        As Pioneer Works Limited completes more projects, this section will showcase completed work,
+        before-and-after photos and customer feedback.
+      </p>
+
+      <div class="testimonial-grid">
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>“Reliable, professional and easy to deal with.”</p>
+          <strong>Customer Review</strong>
+        </div>
+
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>“Great workmanship and clear communication.”</p>
+          <strong>Customer Review</strong>
+        </div>
+
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>“Friendly service and quality results.”</p>
+          <strong>Customer Review</strong>
+        </div>
+      </div>
+
+      <div class="hero-buttons" style="justify-content:center; margin-top:35px;">
+        <a href="gallery.html" class="btn-primary">View Our Work</a>
       </div>
     </div>
   </section>
