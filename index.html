@@ -8,379 +8,8 @@
 
   <meta name="description" content="Pioneer Works Limited provides painting, fencing, decks, property maintenance, home improvements, general repairs and handyman services across Auckland, Waikato and Bay of Plenty.">
 
-  <style>
-    :root {
-      --blue: #003f8f;
-      --deep-blue: #002b63;
-      --black: #111111;
-      --gold: #c9962b;
-      --white: #ffffff;
-      --light: #f6f8fc;
-      --soft-blue: #eef4fb;
-      --text: #222222;
-      --muted: #666666;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      color: var(--text);
-      background: var(--white);
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    .top-bar {
-      background: var(--deep-blue);
-      color: white;
-      text-align: center;
-      padding: 10px 15px;
-      font-size: 14px;
-    }
-
-    header {
-      background: white;
-      border-bottom: 1px solid #e5e5e5;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .nav-wrap {
-      max-width: 1180px;
-      margin: auto;
-      padding: 14px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .logo img {
-      height: 72px;
-      width: auto;
-    }
-
-    nav a {
-      color: var(--black);
-      font-weight: bold;
-      margin-left: 16px;
-      font-size: 14px;
-    }
-
-    .quote-btn {
-      background: var(--gold);
-      color: white !important;
-      padding: 12px 18px;
-      border-radius: 6px;
-    }
-
-    .hero {
-      background: linear-gradient(120deg, rgba(0,43,99,0.97), rgba(0,63,143,0.9));
-      color: white;
-      padding: 95px 20px;
-    }
-
-    .hero-inner {
-      max-width: 1180px;
-      margin: auto;
-    }
-
-    .hero h1 {
-      font-size: 56px;
-      line-height: 1.08;
-      max-width: 720px;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 20px;
-      max-width: 780px;
-      margin-bottom: 28px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .btn-primary {
-      background: var(--gold);
-      color: white;
-      padding: 15px 26px;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-
-    .btn-secondary {
-      border: 2px solid white;
-      color: white;
-      padding: 13px 24px;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 75px 20px;
-    }
-
-    .container {
-      max-width: 1180px;
-      margin: auto;
-    }
-
-    .section-label {
-      text-align: center;
-      color: var(--gold);
-      font-weight: bold;
-      letter-spacing: 1px;
-      margin-bottom: 8px;
-      text-transform: uppercase;
-      font-size: 13px;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 36px;
-      color: var(--deep-blue);
-      margin-bottom: 14px;
-    }
-
-    .section-subtitle {
-      text-align: center;
-      max-width: 780px;
-      margin: 0 auto 42px;
-      color: var(--muted);
-      font-size: 17px;
-    }
-
-    .services-grid,
-    .why-grid,
-    .process-grid,
-    .testimonial-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 22px;
-    }
-
-    .service-card,
-    .why-card,
-    .testimonial {
-      background: white;
-      border: 1px solid #e5eaf2;
-      border-radius: 14px;
-      padding: 30px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-    }
-
-    .service-card h3,
-    .why-card h3 {
-      color: var(--deep-blue);
-      margin-bottom: 10px;
-      font-size: 22px;
-    }
-
-    .service-card p,
-    .why-card p {
-      color: var(--muted);
-      margin-bottom: 16px;
-    }
-
-    .service-card a {
-      color: var(--blue);
-      font-weight: bold;
-    }
-
-    .why-section,
-    .testimonials,
-    .areas-section {
-      background: var(--light);
-    }
-
-    .why-card {
-      border-left: 5px solid var(--gold);
-    }
-
-    .process {
-      background: var(--deep-blue);
-      color: white;
-    }
-
-    .process .section-title,
-    .process .section-subtitle {
-      color: white;
-    }
-
-    .process-card {
-      border: 1px solid rgba(255,255,255,0.25);
-      border-radius: 14px;
-      padding: 28px;
-      background: rgba(255,255,255,0.06);
-    }
-
-    .process-card span {
-      color: var(--gold);
-      font-size: 28px;
-      font-weight: bold;
-    }
-
-    .areas-box {
-      background: white;
-      border-radius: 18px;
-      padding: 42px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-      border: 1px solid #e5eaf2;
-      text-align: center;
-    }
-
-    .areas-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 14px;
-      margin-top: 24px;
-    }
-
-    .areas-list span {
-      background: var(--soft-blue);
-      color: var(--deep-blue);
-      padding: 14px 22px;
-      border-radius: 999px;
-      font-weight: bold;
-    }
-
-    .services-line {
-      margin-top: 28px;
-      color: var(--muted);
-      font-size: 17px;
-    }
-
-    .stars {
-      color: var(--gold);
-      margin-bottom: 10px;
-      font-size: 20px;
-    }
-
-    .cta {
-      background: linear-gradient(120deg, var(--deep-blue), var(--blue));
-      color: white;
-      text-align: center;
-    }
-
-    .cta h2 {
-      font-size: 38px;
-      margin-bottom: 14px;
-    }
-
-    .cta p {
-      max-width: 760px;
-      margin: 0 auto 28px;
-      font-size: 18px;
-    }
-
-    footer {
-      background: var(--black);
-      color: white;
-      padding: 55px 20px 22px;
-    }
-
-    .footer-grid {
-      max-width: 1180px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 32px;
-    }
-
-    footer h3 {
-      margin-bottom: 12px;
-      color: white;
-    }
-
-    footer p,
-    footer a {
-      color: #dddddd;
-      font-size: 14px;
-      display: block;
-      margin-bottom: 6px;
-    }
-
-    .copyright {
-      text-align: center;
-      border-top: 1px solid rgba(255,255,255,0.18);
-      margin-top: 35px;
-      padding-top: 18px;
-      color: #cccccc;
-      font-size: 13px;
-    }
-
-    @media (max-width: 850px) {
-      .nav-wrap {
-        flex-direction: column;
-      }
-
-      nav {
-        text-align: center;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 7px;
-      }
-
-      .logo img {
-        height: 62px;
-      }
-
-      .hero {
-        text-align: center;
-        padding: 75px 20px;
-      }
-
-      .hero h1 {
-        font-size: 40px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .hero p {
-        font-size: 18px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .hero-buttons {
-        justify-content: center;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .hero h1 {
-        font-size: 34px;
-      }
-
-      .section-title {
-        font-size: 28px;
-      }
-
-      .top-bar {
-        font-size: 12px;
-      }
-
-      .areas-box {
-        padding: 28px 20px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
 </head>
 
 <body>
@@ -399,6 +28,7 @@
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
+        <a href="painting.html">Painting</a>
         <a href="gallery.html">Gallery</a>
         <a href="testimonials.html">Testimonials</a>
         <a href="contact.html">Contact</a>
@@ -563,6 +193,39 @@
     </div>
   </section>
 
+  <section class="page-light">
+    <div class="container">
+      <p class="section-label">Project Types</p>
+      <h2 class="section-title">Who We Help</h2>
+      <p class="section-subtitle">
+        We work with homeowners, landlords, rental properties, property managers,
+        small businesses and commercial clients needing reliable property services.
+      </p>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <h3>Homeowners</h3>
+          <p>Painting, repairs, upgrades, decks, fencing and general improvements around the home.</p>
+        </div>
+
+        <div class="why-card">
+          <h3>Rental Properties</h3>
+          <p>Maintenance, repair work, refresh painting and practical property improvements.</p>
+        </div>
+
+        <div class="why-card">
+          <h3>Commercial Spaces</h3>
+          <p>Painting, repairs and maintenance services for offices, shops and business properties.</p>
+        </div>
+
+        <div class="why-card">
+          <h3>Property Managers</h3>
+          <p>Reliable support for repairs, maintenance and improvement jobs across managed properties.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="testimonials">
     <div class="container">
       <p class="section-label">Customer Feedback</p>
@@ -593,6 +256,17 @@
     </div>
   </section>
 
+  <section>
+    <div class="container">
+      <p class="section-label">Need Something Else?</p>
+      <h2 class="section-title">If It Is Not Listed, Please Ask</h2>
+      <p class="section-subtitle">
+        Every property is different. If you need help with a job that is not listed on the website,
+        get in touch and we will let you know whether we can assist or guide you in the right direction.
+      </p>
+    </div>
+  </section>
+
   <section class="cta">
     <div class="container">
       <h2>Ready to Start Your Project?</h2>
@@ -620,6 +294,7 @@
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
+        <a href="painting.html">Painting</a>
         <a href="gallery.html">Gallery</a>
         <a href="quote.html">Request Quote</a>
         <a href="contact.html">Contact</a>
