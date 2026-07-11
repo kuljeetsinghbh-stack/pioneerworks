@@ -1,1 +1,965 @@
-<h1>About Pioneer Works</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>Request a Free Quote | Pioneer Works Limited</title>
+  <meta
+    name="description"
+    content="Request a free quote from Pioneer Works Limited for painting, fence construction, deck construction, property maintenance, home improvements and handyman services across Auckland, Waikato and Bay of Plenty."
+  />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .quote-hero {
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0, 31, 77, 0.96) 0%,
+          rgba(0, 43, 99, 0.88) 48%,
+          rgba(0, 43, 99, 0.28) 100%
+        ),
+        url("hero-home.jpeg");
+      background-size: cover;
+      background-position: center right;
+      color: white;
+      padding: 90px 20px;
+    }
+    .quote-page {
+      background: var(--light);
+    }
+    .quote-layout {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.8fr) minmax(420px, 1.2fr);
+      gap: 36px;
+      align-items: start;
+    }
+    .quote-information {
+      display: grid;
+      gap: 22px;
+      position: sticky;
+      top: 145px;
+    }
+    .quote-image {
+      min-height: 310px;
+      border-radius: 18px;
+      background:
+        linear-gradient(
+          180deg,
+          rgba(0, 31, 77, 0.08),
+          rgba(0, 31, 77, 0.28)
+        ),
+        url("hero-home.jpeg");
+      background-size: cover;
+      background-position: center;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+    .quote-benefits {
+      background: var(--deep-blue);
+      color: white;
+      border-radius: 18px;
+      padding: 32px;
+      box-shadow: var(--shadow);
+    }
+    .quote-benefits h2 {
+      color: white;
+      font-size: 29px;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .quote-benefits > p {
+      color: #e4edf9;
+      margin-bottom: 22px;
+    }
+    .benefit-list {
+      display: grid;
+      gap: 0;
+    }
+    .benefit-item {
+      display: grid;
+      grid-template-columns: 26px 1fr;
+      gap: 11px;
+      align-items: start;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .benefit-item:last-child {
+      border-bottom: none;
+    }
+    .benefit-mark {
+      color: var(--gold);
+      font-size: 19px;
+      font-weight: 900;
+      line-height: 1.2;
+    }
+    .benefit-item strong {
+      display: block;
+      color: white;
+      margin-bottom: 2px;
+    }
+    .benefit-item span {
+      color: #dce7f5;
+      font-size: 14px;
+    }
+    .direct-contact {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+    .direct-contact h3 {
+      color: var(--deep-blue);
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+    .direct-contact p {
+      color: var(--muted);
+      margin-bottom: 15px;
+    }
+    .direct-contact a {
+      display: block;
+      color: var(--blue);
+      font-weight: 800;
+      overflow-wrap: anywhere;
+      margin-top: 9px;
+    }
+    .quote-form-panel {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 40px;
+      box-shadow: var(--shadow);
+    }
+    .quote-form-panel h2 {
+      color: var(--deep-blue);
+      font-size: 34px;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .form-introduction {
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+    .required-note {
+      background: var(--soft);
+      color: var(--deep-blue);
+      border-left: 4px solid var(--gold);
+      border-radius: 7px;
+      padding: 13px 15px;
+      margin-bottom: 28px;
+      font-size: 14px;
+    }
+    .form-section-title {
+      color: var(--deep-blue);
+      font-size: 21px;
+      margin: 30px 0 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .form-section-title:first-of-type {
+      margin-top: 0;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    .form-group {
+      min-width: 0;
+    }
+    .quote-form label {
+      display: block;
+      color: var(--deep-blue);
+      font-weight: 800;
+      margin-bottom: 7px;
+    }
+    .quote-form input,
+    .quote-form select,
+    .quote-form textarea {
+      width: 100%;
+      min-height: 50px;
+      padding: 13px 14px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      background: white;
+      color: var(--text);
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      margin-bottom: 18px;
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+    .quote-form input:focus,
+    .quote-form select:focus,
+    .quote-form textarea:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(0, 63, 143, 0.12);
+      outline: none;
+    }
+    .quote-form textarea {
+      min-height: 170px;
+      resize: vertical;
+    }
+    .field-help {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: -10px;
+      margin-bottom: 17px;
+    }
+    .checkbox-row {
+      display: grid;
+      grid-template-columns: 22px 1fr;
+      gap: 10px;
+      align-items: start;
+      margin: 4px 0 22px;
+    }
+    .checkbox-row input {
+      width: 18px;
+      min-height: 18px;
+      height: 18px;
+      margin: 3px 0 0;
+    }
+    .checkbox-row label {
+      color: var(--text);
+      font-weight: 400;
+      line-height: 1.55;
+      margin: 0;
+    }
+    .checkbox-row a {
+      color: var(--blue);
+      font-weight: 700;
+    }
+    .submit-button {
+      width: 100%;
+      min-height: 54px;
+      border: none;
+      border-radius: 8px;
+      background: var(--gold);
+      color: white;
+      padding: 16px 24px;
+      font-size: 17px;
+      font-weight: 900;
+      cursor: pointer;
+      transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+    }
+    .submit-button:hover {
+      transform: translateY(-2px);
+      opacity: 0.94;
+    }
+    .submit-button:focus {
+      outline: 3px solid rgba(201, 150, 43, 0.35);
+      outline-offset: 3px;
+    }
+    .form-privacy-note {
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+      line-height: 1.55;
+      margin-top: 15px;
+    }
+    .form-privacy-note a {
+      color: var(--blue);
+      font-weight: 700;
+    }
+    .honeypot-field {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .quote-process {
+      background: white;
+    }
+    .quote-process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+    .quote-process-card {
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px 23px;
+      text-align: center;
+    }
+    .process-number {
+      width: 46px;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--deep-blue);
+      color: white;
+      border-radius: 50%;
+      font-weight: 900;
+      margin: 0 auto 15px;
+    }
+    .quote-process-card h3 {
+      color: var(--deep-blue);
+      margin-bottom: 8px;
+    }
+    .quote-process-card p {
+      color: var(--muted);
+    }
+    @media (max-width: 1000px) {
+      .quote-layout {
+        grid-template-columns: 1fr;
+      }
+      .quote-information {
+        position: static;
+        grid-template-columns: 1fr 1fr;
+      }
+      .quote-image {
+        grid-column: 1 / -1;
+      }
+      .quote-process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 900px) {
+      .quote-hero {
+        text-align: center;
+        background:
+          linear-gradient(
+            120deg,
+            rgba(0, 43, 99, 0.98),
+            rgba(0, 63, 143, 0.94)
+          );
+      }
+      .quote-hero .gold-line {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    @media (max-width: 700px) {
+      .quote-information {
+        grid-template-columns: 1fr;
+      }
+      .quote-image {
+        grid-column: auto;
+        min-height: 240px;
+      }
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+      .quote-form-panel {
+        padding: 29px 22px;
+      }
+      .quote-benefits,
+      .direct-contact {
+        padding: 25px 22px;
+      }
+      .quote-process-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 480px) {
+      .quote-hero {
+        padding: 68px 18px;
+      }
+      .quote-hero h1 {
+        font-size: 38px;
+      }
+      .quote-form-panel h2 {
+        font-size: 28px;
+      }
+      .quote-form input,
+      .quote-form select,
+      .quote-form textarea {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <span>Servicing Auckland • Waikato • Bay of Plenty</span>
+      <span>info@pioneerworks.co.nz</span>
+      <span>020 4510 601</span>
+    </div>
+  </div>
+  <header>
+    <div class="nav-wrap">
+      <a href="index.html" class="logo">
+        <img
+          src="logo.png"
+          alt="Pioneer Works Limited Logo"
+        />
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Our Work & Testimonials</a>
+        <a href="quote.html">Request Quote</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="quote.html" class="quote-btn">
+          Get a Free Quote
+        </a>
+      </nav>
+    </div>
+  </header>
+  <section class="quote-hero">
+    <div class="hero-inner">
+      <p class="company-name">
+        Pioneer Works Limited
+      </p>
+      <h1>
+        Request Your<br />
+        Free Quote.
+      </h1>
+      <div class="gold-line"></div>
+      <p>
+        Tell us about your painting, fencing, decking, maintenance,
+        repair or home improvement project. We will review your
+        information and contact you about the next step.
+      </p>
+      <div class="hero-features">
+        <div class="hero-feature">Free Quote Request</div>
+        <div class="hero-feature">Clear Communication</div>
+        <div class="hero-feature">No Obligation</div>
+      </div>
+    </div>
+  </section>
+  <section class="quote-page">
+    <div class="container">
+      <div class="quote-layout">
+        <aside class="quote-information">
+          <div
+            class="quote-image"
+            role="img"
+            aria-label="Modern home with a premium timber deck"
+          ></div>
+          <div class="quote-benefits">
+            <h2>Why Choose Pioneer Works?</h2>
+            <p>
+              A straightforward quotation process supported by friendly,
+              reliable communication.
+            </p>
+            <div class="benefit-list">
+              <div class="benefit-item">
+                <div class="benefit-mark">✓</div>
+                <div>
+                  <strong>Free, No-Obligation Quotes</strong>
+                  <span>
+                    Tell us about your project without committing to the work.
+                  </span>
+                </div>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-mark">✓</div>
+                <div>
+                  <strong>Clear Communication</strong>
+                  <span>
+                    We explain the next step in a simple and professional way.
+                  </span>
+                </div>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-mark">✓</div>
+                <div>
+                  <strong>Quality Workmanship</strong>
+                  <span>
+                    We take pride in careful work and clean results.
+                  </span>
+                </div>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-mark">✓</div>
+                <div>
+                  <strong>Residential & Commercial</strong>
+                  <span>
+                    Enquiries are welcome from homeowners, landlords,
+                    property managers and businesses.
+                  </span>
+                </div>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-mark">✓</div>
+                <div>
+                  <strong>Wide Service Area</strong>
+                  <span>
+                    Auckland, Waikato and Bay of Plenty.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="direct-contact">
+            <h3>Prefer to Contact Us Directly?</h3>
+            <p>
+              You can speak with us or send your project information by email.
+            </p>
+            <a href="tel:0204510601">
+              020 4510 601
+            </a>
+            <a href="mailto:quotes@pioneerworks.co.nz">
+              quotes@pioneerworks.co.nz
+            </a>
+          </div>
+        </aside>
+        <div class="quote-form-panel">
+          <h2>Tell Us About Your Project</h2>
+          <p class="form-introduction">
+            Please complete the form below. Fields marked with an asterisk
+            are required.
+          </p>
+          <div class="required-note">
+            Providing clear project details, measurements and photos later
+            can help us assess your enquiry more efficiently.
+          </div>
+          <form
+            class="quote-form"
+            action="https://formsubmit.co/quotes@pioneerworks.co.nz"
+            method="POST"
+          >
+            <input
+              type="hidden"
+              name="_subject"
+              value="New Quote Request – Pioneer Works Website"
+            />
+            <input
+              type="hidden"
+              name="_template"
+              value="table"
+            />
+            <input
+              type="hidden"
+              name="_captcha"
+              value="true"
+            />
+            <input
+              type="hidden"
+              name="_autoresponse"
+              value="Thank you for contacting Pioneer Works Limited. We have received your quote request and will review the information you provided. We will contact you regarding the next step."
+            />
+            <div class="honeypot-field" aria-hidden="true">
+              <label for="website-check">
+                Leave this field empty
+              </label>
+              <input
+                type="text"
+                id="website-check"
+                name="_honey"
+                tabindex="-1"
+                autocomplete="off"
+              />
+            </div>
+            <h3 class="form-section-title">
+              Your Contact Details
+            </h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="full-name">
+                  Full Name *
+                </label>
+                <input
+                  type="text"
+                  id="full-name"
+                  name="Full Name"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone-number">
+                  Phone Number *
+                </label>
+                <input
+                  type="tel"
+                  id="phone-number"
+                  name="Phone Number"
+                  autocomplete="tel"
+                  inputmode="tel"
+                  required
+                />
+              </div>
+            </div>
+            <label for="email-address">
+              Email Address *
+            </label>
+            <input
+              type="email"
+              id="email-address"
+              name="Email Address"
+              autocomplete="email"
+              inputmode="email"
+              required
+            />
+            <h3 class="form-section-title">
+              Property & Service Details
+            </h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="region">
+                  Region *
+                </label>
+                <select
+                  id="region"
+                  name="Region"
+                  required
+                >
+                  <option value="">
+                    Select your region
+                  </option>
+                  <option value="Auckland">
+                    Auckland
+                  </option>
+                  <option value="Waikato">
+                    Waikato
+                  </option>
+                  <option value="Bay of Plenty">
+                    Bay of Plenty
+                  </option>
+                  <option value="Other or Unsure">
+                    Other / Not sure
+                  </option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="service-required">
+                  Service Required *
+                </label>
+                <select
+                  id="service-required"
+                  name="Service Required"
+                  required
+                >
+                  <option value="">
+                    Select a service
+                  </option>
+                  <option value="Interior Painting">
+                    Interior Painting
+                  </option>
+                  <option value="Exterior Painting">
+                    Exterior Painting
+                  </option>
+                  <option value="Fence Construction">
+                    Fence Construction
+                  </option>
+                  <option value="Fence Repairs">
+                    Fence Repairs
+                  </option>
+                  <option value="Deck Construction">
+                    Deck Construction
+                  </option>
+                  <option value="Deck Repairs or Restoration">
+                    Deck Repairs / Restoration
+                  </option>
+                  <option value="Property Maintenance">
+                    Property Maintenance
+                  </option>
+                  <option value="Home Improvements">
+                    Home Improvements
+                  </option>
+                  <option value="Handyman Services">
+                    Handyman Services
+                  </option>
+                  <option value="Multiple Services">
+                    Multiple Services
+                  </option>
+                  <option value="Other">
+                    Other / Not listed
+                  </option>
+                </select>
+              </div>
+            </div>
+            <label for="property-address">
+              Property Address or Suburb
+            </label>
+            <input
+              type="text"
+              id="property-address"
+              name="Property Address or Suburb"
+              autocomplete="street-address"
+              placeholder="For example: Hamilton, Tauranga or South Auckland"
+            />
+            <span class="field-help">
+              You may provide only the suburb if you do not wish to enter
+              the complete address at this stage.
+            </span>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="preferred-timeframe">
+                  Preferred Timeframe
+                </label>
+                <select
+                  id="preferred-timeframe"
+                  name="Preferred Timeframe"
+                >
+                  <option value="">
+                    Select a timeframe
+                  </option>
+                  <option value="As soon as possible">
+                    As soon as possible
+                  </option>
+                  <option value="Within 2 weeks">
+                    Within 2 weeks
+                  </option>
+                  <option value="Within 1 month">
+                    Within 1 month
+                  </option>
+                  <option value="Within 1 to 3 months">
+                    Within 1–3 months
+                  </option>
+                  <option value="Flexible">
+                    Flexible
+                  </option>
+                  <option value="Quote only at this stage">
+                    Quote only at this stage
+                  </option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="preferred-contact">
+                  Preferred Contact Method
+                </label>
+                <select
+                  id="preferred-contact"
+                  name="Preferred Contact Method"
+                >
+                  <option value="Phone">
+                    Phone
+                  </option>
+                  <option value="Email">
+                    Email
+                  </option>
+                  <option value="Either phone or email">
+                    Either phone or email
+                  </option>
+                </select>
+              </div>
+            </div>
+            <label for="referral-source">
+              How Did You Hear About Us?
+            </label>
+            <select
+              id="referral-source"
+              name="How Customer Heard About Us"
+            >
+              <option value="">
+                Select an option
+              </option>
+              <option value="Google Search">
+                Google Search
+              </option>
+              <option value="Google Maps or Business Profile">
+                Google Maps / Business Profile
+              </option>
+              <option value="Facebook">
+                Facebook
+              </option>
+              <option value="Instagram">
+                Instagram
+              </option>
+              <option value="Friend or Family">
+                Friend / Family
+              </option>
+              <option value="Returning Customer">
+                Returning Customer
+              </option>
+              <option value="Vehicle or Signage">
+                Vehicle / Signage
+              </option>
+              <option value="Other">
+                Other
+              </option>
+            </select>
+            <h3 class="form-section-title">
+              Project Information
+            </h3>
+            <label for="project-description">
+              Project Description *
+            </label>
+            <textarea
+              id="project-description"
+              name="Project Description"
+              required
+              placeholder="Please describe the work you need, approximate size, current condition, access information and any other useful details."
+            ></textarea>
+            <div class="checkbox-row">
+              <input
+                type="checkbox"
+                id="privacy-consent"
+                name="Privacy Consent"
+                value="Customer agreed"
+                required
+              />
+              <label for="privacy-consent">
+                I agree that Pioneer Works Limited may use the information
+                provided to respond to my enquiry and prepare or discuss a
+                quotation. I have read the
+                <a href="privacy.html" target="_blank" rel="noopener">
+                  Privacy Policy
+                </a>.
+              </label>
+            </div>
+            <button
+              type="submit"
+              class="submit-button"
+            >
+              Request My Free Quote
+            </button>
+            <p class="form-privacy-note">
+              Your information will be sent securely through FormSubmit
+              to quotes@pioneerworks.co.nz and used to respond to this
+              quotation request.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="quote-process">
+    <div class="container">
+      <p class="section-label">
+        What Happens Next?
+      </p>
+      <h2 class="section-title">
+        A Clear and Simple Quote Process
+      </h2>
+      <p class="section-subtitle">
+        We make it easy to understand what happens after you send
+        your quotation request.
+      </p>
+      <div class="quote-process-grid">
+        <div class="quote-process-card">
+          <div class="process-number">
+            1
+          </div>
+          <h3>Send Your Request</h3>
+          <p>
+            Complete the form with your contact and project information.
+          </p>
+        </div>
+        <div class="quote-process-card">
+          <div class="process-number">
+            2
+          </div>
+          <h3>We Review It</h3>
+          <p>
+            We review your requirements and contact you if more information
+            is needed.
+          </p>
+        </div>
+        <div class="quote-process-card">
+          <div class="process-number">
+            3
+          </div>
+          <h3>Discuss the Project</h3>
+          <p>
+            Depending on the work, we may request photos or arrange
+            a suitable site visit.
+          </p>
+        </div>
+        <div class="quote-process-card">
+          <div class="process-number">
+            4
+          </div>
+          <h3>Receive the Next Step</h3>
+          <p>
+            We explain the quotation process and provide clear information
+            about moving forward.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="cta">
+    <div class="container">
+      <h2>
+        Prefer to Speak With Us?
+      </h2>
+      <p>
+        Call Pioneer Works Limited or email your project details
+        directly to our quotations inbox.
+      </p>
+      <div
+        class="hero-buttons"
+        style="justify-content:center;"
+      >
+        <a
+          href="tel:0204510601"
+          class="btn-primary"
+        >
+          Call 020 4510 601
+        </a>
+        <a
+          href="mailto:quotes@pioneerworks.co.nz"
+          class="btn-secondary"
+        >
+          Email for a Quote
+        </a>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <img
+          src="logo.png"
+          alt="Pioneer Works Limited Logo"
+          class="footer-logo"
+        />
+        <p>
+          Professional property services across Auckland,
+          Waikato and Bay of Plenty.
+        </p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Our Work & Testimonials</a>
+        <a href="quote.html">Request Quote</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <p>Painting</p>
+        <p>Fence Construction & Repairs</p>
+        <p>Deck Construction & Repairs</p>
+        <p>Property Maintenance</p>
+        <p>Home Improvements</p>
+        <p>Handyman Services</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <a href="tel:0204510601">
+          020 4510 601
+        </a>
+        <a href="mailto:info@pioneerworks.co.nz">
+          info@pioneerworks.co.nz
+        </a>
+        <a href="mailto:quotes@pioneerworks.co.nz">
+          quotes@pioneerworks.co.nz
+        </a>
+        <a href="https://www.pioneerworks.co.nz">
+          www.pioneerworks.co.nz
+        </a>
+        <p>
+          Auckland • Waikato • Bay of Plenty
+        </p>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 Pioneer Works Limited. All rights reserved.
+      |
+      <a href="privacy.html">
+        Privacy Policy
+      </a>
+    </div>
+  </footer>
+</body>
+</html>
