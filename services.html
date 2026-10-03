@@ -3,41 +3,25 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>
-    Property Services | Painting, Fencing, Decks | Pioneer Works Limited
-  </title>
+  <title>Property Services | Painting, Fencing, Decks | Pioneer Works Limited</title>
 
   <meta
     name="description"
     content="Explore Pioneer Works Limited property services including painting, fencing, decks, property maintenance, home improvements and handyman services across Auckland, Waikato and Bay of Plenty."
   >
 
-  <meta
-    name="robots"
-    content="index, follow"
-  >
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#002b63">
 
-  <meta
-    name="theme-color"
-    content="#002b63"
-  >
-
-  <link
-    rel="stylesheet"
-    href="styles.css"
-  >
+  <link rel="stylesheet" href="styles.css">
 
   <style>
 
-    /* =====================================================
-       SERVICES PAGE
-       ===================================================== */
+    /* =========================================================
+       SERVICES PAGE HERO
+       ========================================================= */
 
     .page-hero {
       position: relative;
@@ -45,7 +29,7 @@
       display: flex;
       align-items: center;
       padding: 75px 20px;
-      color: white;
+      color: #ffffff;
 
       background:
         linear-gradient(
@@ -54,24 +38,19 @@
           rgba(0,43,99,0.91) 48%,
           rgba(0,43,99,0.45) 100%
         ),
-        url("hero-home.jpeg");
-
-      background-size: cover;
-      background-position: center;
+        url("hero-home.jpeg") center/cover no-repeat;
     }
 
     .page-hero::after {
       content: "";
       position: absolute;
       inset: 0;
-
       background:
         linear-gradient(
           180deg,
           rgba(0,0,0,0.01),
           rgba(0,0,0,0.10)
         );
-
       pointer-events: none;
     }
 
@@ -80,23 +59,23 @@
       z-index: 2;
       width: 100%;
       max-width: 1200px;
-      margin: auto;
+      margin: 0 auto;
     }
 
     .page-hero .section-label {
-      text-align: left;
-      color: var(--gold-light);
       margin-bottom: 14px;
+      color: var(--gold-light);
+      text-align: left;
     }
 
     .page-hero h1 {
       max-width: 760px;
-      color: white;
-      font-size: clamp(42px,6vw,64px);
+      margin-bottom: 20px;
+      color: #ffffff;
+      font-size: clamp(42px, 6vw, 64px);
       font-weight: 900;
       line-height: 1.05;
       letter-spacing: -1px;
-      margin-bottom: 20px;
     }
 
     .page-hero p {
@@ -107,12 +86,12 @@
     }
 
 
-    /* =====================================================
-       INTRO
-       ===================================================== */
+    /* =========================================================
+       SERVICES INTRODUCTION
+       ========================================================= */
 
     .services-intro {
-      background: white;
+      background: #ffffff;
     }
 
     .services-intro-grid {
@@ -132,8 +111,8 @@
     }
 
     .services-intro-copy p {
-      color: var(--muted);
       margin-bottom: 17px;
+      color: var(--muted);
     }
 
     .services-summary {
@@ -144,31 +123,31 @@
 
     .summary-item {
       position: relative;
+      padding: 20px 18px 20px 43px;
+      color: var(--deep-blue);
       background: var(--soft);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 20px 18px 20px 43px;
-      color: var(--deep-blue);
       font-weight: 800;
     }
 
     .summary-item::before {
       content: "✓";
       position: absolute;
-      left: 18px;
       top: 19px;
+      left: 18px;
       color: var(--gold);
       font-weight: 900;
     }
 
 
-    /* =====================================================
-       INDIVIDUAL SERVICES
-       ===================================================== */
+    /* =========================================================
+       SERVICE SECTIONS
+       ========================================================= */
 
     .service-detail-section {
       padding: 0 20px 80px;
-      background: white;
+      background: #ffffff;
       scroll-margin-top: 130px;
     }
 
@@ -178,15 +157,14 @@
 
     .service-detail {
       max-width: 1200px;
-      margin: auto;
+      margin: 0 auto;
 
       display: grid;
       grid-template-columns: 0.78fr 1.22fr;
 
       overflow: hidden;
 
-      background: white;
-
+      background: #ffffff;
       border: 1px solid var(--border);
       border-radius: 18px;
 
@@ -194,9 +172,9 @@
     }
 
 
-    /* =====================================================
-       SERVICE PHOTO
-       ===================================================== */
+    /* =========================================================
+       SERVICE IMAGE PANEL
+       ========================================================= */
 
     .service-detail-heading {
       position: relative;
@@ -212,12 +190,12 @@
       overflow: hidden;
       isolation: isolate;
 
-      color: white;
+      color: #ffffff;
       background: var(--deep-blue);
     }
 
 
-    /* Elegant navy gradient over bottom of image */
+    /* Elegant dark gradient so text remains readable */
 
     .service-detail-heading::after {
       content: "";
@@ -230,16 +208,17 @@
       background:
         linear-gradient(
           180deg,
-          rgba(0,31,77,0.03) 18%,
-          rgba(0,31,77,0.28) 54%,
-          rgba(0,31,77,0.92) 100%
+          rgba(0,31,77,0.02) 15%,
+          rgba(0,31,77,0.12) 38%,
+          rgba(0,31,77,0.48) 66%,
+          rgba(0,31,77,0.94) 100%
         );
 
       pointer-events: none;
     }
 
 
-    /* Actual service image */
+    /* Service photograph */
 
     .service-detail-heading img {
       position: absolute;
@@ -257,18 +236,20 @@
     }
 
 
-    /* Very subtle professional hover */
+    /* Very subtle hover effect */
 
     .service-detail:hover .service-detail-heading img {
       transform: scale(1.025);
     }
 
 
-    /* Small service category */
+    /* Small category heading */
 
     .service-number {
       position: relative;
       z-index: 1;
+
+      margin-bottom: 12px;
 
       color: var(--gold-light);
 
@@ -277,127 +258,113 @@
 
       letter-spacing: 2px;
       text-transform: uppercase;
-
-      margin-bottom: 12px;
     }
 
 
-    /* Service name */
+    /* Main service title */
 
     .service-detail-heading h2 {
       position: relative;
       z-index: 1;
 
-      color: white;
-
-      font-size: clamp(30px,4vw,40px);
-      font-weight: 900;
-
-      line-height: 1.15;
-
       margin-bottom: 13px;
 
-      text-shadow:
-        0 2px 14px rgba(0,0,0,0.22);
+      color: #ffffff;
+
+      font-size: clamp(30px, 4vw, 40px);
+      font-weight: 900;
+      line-height: 1.15;
+
+      text-shadow: 0 2px 14px rgba(0,0,0,0.22);
     }
 
 
-    /* Text over photo */
+    /* Service description on image */
 
     .service-detail-heading p {
       position: relative;
       z-index: 1;
 
       max-width: 340px;
+      margin: 0;
 
-      color: rgba(255,255,255,0.90);
+      color: rgba(255,255,255,0.92);
 
       font-size: 15px;
       line-height: 1.7;
-
-      margin: 0;
     }
 
 
-    /* =====================================================
-       SERVICE INFORMATION
-       ===================================================== */
+    /* =========================================================
+       SERVICE INFORMATION PANEL
+       ========================================================= */
 
     .service-detail-content {
       padding: 45px;
     }
 
     .service-detail-content > p {
+      margin-bottom: 24px;
       color: var(--muted);
       font-size: 16px;
-      margin-bottom: 24px;
     }
 
     .service-detail-content h3 {
+      margin-bottom: 15px;
       color: var(--deep-blue);
       font-size: 18px;
       font-weight: 900;
-      margin-bottom: 15px;
     }
 
     .service-list {
       display: grid;
-
-      grid-template-columns:
-        repeat(2,minmax(0,1fr));
-
+      grid-template-columns: repeat(2, minmax(0,1fr));
       gap: 12px 28px;
 
-      list-style: none;
-
       margin-bottom: 27px;
+
+      list-style: none;
     }
 
     .service-list li {
       position: relative;
-
-      color: var(--text);
-
       padding-left: 25px;
-
+      color: var(--text);
       font-size: 15px;
     }
 
     .service-list li::before {
       content: "✓";
-
       position: absolute;
-
-      left: 0;
       top: 0;
-
+      left: 0;
       color: var(--gold);
-
       font-weight: 900;
     }
 
 
-    /* NOTE BOX */
+    /* =========================================================
+       SERVICE NOTE
+       ========================================================= */
 
     .service-note {
-      background: var(--soft-gold);
-
-      border-left:
-        4px solid var(--gold);
-
-      border-radius: 7px;
-
+      margin-bottom: 24px;
       padding: 17px 19px;
 
       color: var(--muted);
+      background: var(--soft-gold);
+
+      border-left: 4px solid var(--gold);
+      border-radius: 7px;
 
       font-size: 14px;
-
-      margin-bottom: 24px;
+      line-height: 1.65;
     }
 
 
-    /* BUTTONS */
+    /* =========================================================
+       SERVICE BUTTONS
+       ========================================================= */
 
     .service-actions {
       display: flex;
@@ -407,37 +374,37 @@
 
     .service-call {
       display: inline-flex;
-
       align-items: center;
       justify-content: center;
 
       min-height: 50px;
-
       padding: 13px 24px;
 
-      border:
-        2px solid var(--deep-blue);
-
-      border-radius: 8px;
-
       color: var(--deep-blue);
+      background: #ffffff;
+
+      border: 2px solid var(--deep-blue);
+      border-radius: 8px;
 
       font-size: 15px;
       font-weight: 900;
 
-      transition: 0.25s ease;
+      transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
     }
 
     .service-call:hover {
+      color: #ffffff;
       background: var(--deep-blue);
-      color: white;
       transform: translateY(-2px);
     }
 
 
-    /* =====================================================
-       NOT LISTED
-       ===================================================== */
+    /* =========================================================
+       SOMETHING NOT LISTED
+       ========================================================= */
 
     .not-listed {
       background: var(--light);
@@ -445,12 +412,10 @@
 
     .not-listed-box {
       max-width: 900px;
-
-      margin: auto;
-
+      margin: 0 auto;
       padding: 45px;
 
-      background: white;
+      background: #ffffff;
 
       border: 1px solid var(--border);
       border-radius: 18px;
@@ -461,52 +426,35 @@
     }
 
     .not-listed-box h2 {
-      color: var(--deep-blue);
-
-      font-size:
-        clamp(29px,4vw,38px);
-
       margin-bottom: 15px;
+      color: var(--deep-blue);
+      font-size: clamp(29px, 4vw, 38px);
     }
 
     .not-listed-box p {
       max-width: 700px;
-
-      margin:
-        0 auto 25px;
-
+      margin: 0 auto 25px;
       color: var(--muted);
     }
 
     .not-listed-actions {
       display: flex;
-
       justify-content: center;
       flex-wrap: wrap;
-
       gap: 12px;
     }
 
 
-    /* =====================================================
+    /* =========================================================
        RESPONSIVE
-       ===================================================== */
+       ========================================================= */
 
-    @media(max-width:900px) {
+    @media (max-width: 900px) {
 
       .page-hero {
         min-height: auto;
-
         padding: 70px 20px;
-
         text-align: center;
-
-        background:
-          linear-gradient(
-            120deg,
-            rgba(0,31,77,0.98),
-            rgba(0,63,143,0.94)
-          );
       }
 
       .page-hero .section-label {
@@ -519,17 +467,26 @@
         margin-right: auto;
       }
 
+      .page-hero .gold-line {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .page-hero .hero-buttons {
+        justify-content: center;
+      }
+
       .services-intro-grid {
         grid-template-columns: 1fr;
         gap: 35px;
       }
 
-      .services-intro-copy .section-label,
-      .services-intro-copy .section-title {
+      .services-intro-copy {
         text-align: center;
       }
 
-      .services-intro-copy {
+      .services-intro-copy .section-label,
+      .services-intro-copy .section-title {
         text-align: center;
       }
 
@@ -549,7 +506,7 @@
     }
 
 
-    @media(max-width:600px) {
+    @media (max-width: 600px) {
 
       .page-hero {
         padding: 60px 18px;
@@ -618,31 +575,28 @@
 <body>
 
 
-  <!-- =====================================================
+  <!-- =========================================================
        ACCESSIBILITY
-       ===================================================== -->
+       ========================================================= -->
 
-  <a
-    class="skip-link"
-    href="#main-content"
-  >
+  <a class="skip-link" href="#main-content">
     Skip to main content
   </a>
 
 
-  <!-- =====================================================
+  <!-- =========================================================
        TOP BAR
-       ===================================================== -->
+       ========================================================= -->
 
   <div class="top-bar">
 
     <div class="top-bar-inner">
 
-      <span>
-        Serving Auckland • Waikato • Bay of Plenty
-      </span>
+      <div>
+        Auckland &bull; Waikato &bull; Bay of Plenty
+      </div>
 
-      <span>
+      <div>
 
         <a href="mailto:info@pioneerworks.co.nz">
           info@pioneerworks.co.nz
@@ -654,16 +608,16 @@
           021 283 9995
         </a>
 
-      </span>
+      </div>
 
     </div>
 
   </div>
 
 
-  <!-- =====================================================
+  <!-- =========================================================
        HEADER
-       ===================================================== -->
+       ========================================================= -->
 
   <header>
 
@@ -748,16 +702,16 @@
   </header>
 
 
-  <!-- =====================================================
-       MAIN
-       ===================================================== -->
+  <!-- =========================================================
+       MAIN CONTENT
+       ========================================================= -->
 
   <main id="main-content">
 
 
-    <!-- ===================================================
+    <!-- =========================================================
          HERO
-         =================================================== -->
+         ========================================================= -->
 
     <section class="page-hero">
 
@@ -778,10 +732,11 @@
 
         <p>
           From painting and fencing to decks, maintenance,
-          home improvements and everyday repairs, Pioneer
-          Works provides practical property services across
-          Auckland, Waikato and the Bay of Plenty.
+          home improvements and everyday repairs, Pioneer Works
+          provides practical property services across Auckland,
+          Waikato and Bay of Plenty.
         </p>
+
 
         <div class="hero-buttons">
 
@@ -806,9 +761,9 @@
     </section>
 
 
-    <!-- ===================================================
+    <!-- =========================================================
          INTRODUCTION
-         =================================================== -->
+         ========================================================= -->
 
     <section class="services-intro">
 
@@ -828,17 +783,16 @@
             </h2>
 
             <p>
-              Property projects come in many sizes. Some
-              involve improving the appearance of your home,
-              while others involve repairing, maintaining or
-              creating something practical.
+              Property projects come in many sizes. Some involve
+              improving the appearance of your home, while others
+              involve repairing, maintaining or creating something
+              practical.
             </p>
 
             <p>
-              Pioneer Works offers a range of services so
-              you can talk to us about the work your
-              property needs without having to start with
-              multiple different enquiries.
+              Pioneer Works offers a range of services so you can
+              talk to us about the work your property needs without
+              having to start with multiple different enquiries.
             </p>
 
           </div>
@@ -883,9 +837,9 @@
     </section>
 
 
-    <!-- ===================================================
+    <!-- =========================================================
          PAINTING
-         =================================================== -->
+         ========================================================= -->
 
     <section
       class="service-detail-section"
@@ -912,8 +866,8 @@
           </h2>
 
           <p>
-            Refresh the appearance of your property with
-            practical interior and exterior painting services.
+            Refresh the appearance of your property with practical
+            interior and exterior painting services.
           </p>
 
         </div>
@@ -922,10 +876,10 @@
         <div class="service-detail-content">
 
           <p>
-            Whether you are refreshing an existing space,
-            updating the look of your home or attending to
-            painted surfaces that need attention, talk to
-            Pioneer Works about your painting project.
+            Whether you are refreshing an existing space, updating
+            the look of your home or attending to painted surfaces
+            that need attention, talk to Pioneer Works about your
+            painting project.
           </p>
 
           <h3>
@@ -943,11 +897,13 @@
 
           </ul>
 
+
           <div class="service-note">
-            Every property and surface is different. Send
-            us details of the area you would like painted
-            so we can understand the work involved.
+            Every property and surface is different. Send us details
+            of the area you would like painted so we can understand
+            the work involved.
           </div>
+
 
           <div class="service-actions">
 
@@ -975,9 +931,9 @@
     </section>
 
 
-    <!-- ===================================================
+    <!-- =========================================================
          FENCING
-         =================================================== -->
+         ========================================================= -->
 
     <section
       class="service-detail-section"
@@ -1004,8 +960,8 @@
           </h2>
 
           <p>
-            Practical fencing solutions for residential
-            properties, including new fencing and repairs.
+            Practical fencing solutions for residential properties,
+            including new fencing and repairs.
           </p>
 
         </div>
@@ -1014,10 +970,10 @@
         <div class="service-detail-content">
 
           <p>
-            A fence can contribute to privacy, boundaries
-            and the overall appearance of a property.
-            Pioneer Works can discuss new fencing work as
-            well as repairs to existing fencing.
+            A fence can contribute to privacy, boundaries and the
+            overall appearance of a property. Pioneer Works can
+            discuss new fencing work as well as repairs to existing
+            fencing.
           </p>
 
           <h3>
@@ -1035,12 +991,14 @@
 
           </ul>
 
+
           <div class="service-note">
-            Fence requirements vary depending on the
-            property, condition, dimensions and type of
-            work required. Include as much information as
-            possible when requesting your quote.
+            Fence requirements vary depending on the property,
+            condition, dimensions and type of work required.
+            Include as much information as possible when requesting
+            your quote.
           </div>
+
 
           <div class="service-actions">
 
@@ -1068,9 +1026,9 @@
     </section>
 
 
-    <!-- ===================================================
+    <!-- =========================================================
          DECKS
-         =================================================== -->
+         ========================================================= -->
 
     <section
       class="service-detail-section"
@@ -1097,8 +1055,8 @@
           </h2>
 
           <p>
-            Deck construction, repairs and restoration work
-            for functional outdoor living spaces.
+            Deck construction, repairs and restoration work for
+            functional outdoor living spaces.
           </p>
 
         </div>
@@ -1108,9 +1066,9 @@
 
           <p>
             A deck can make an outdoor area more useful and
-            enjoyable. Whether you are considering a new
-            deck or have an existing deck that needs
-            attention, tell us about your project.
+            enjoyable. Whether you are considering a new deck or
+            have an existing deck that needs attention, tell us
+            about your project.
           </p>
 
           <h3>
@@ -1128,12 +1086,14 @@
 
           </ul>
 
+
           <div class="service-note">
-            The requirements for deck work depend on the
-            design, dimensions, existing condition and
-            project scope. Send us your project details
-            so the work can be discussed properly.
+            The requirements for deck work depend on the design,
+            dimensions, existing condition and project scope.
+            Send us your project details so the work can be
+            discussed properly.
           </div>
+
 
           <div class="service-actions">
 
@@ -1161,13 +1121,13 @@
     </section>
 
 
-    <!-- ===================================================
+    <!-- =========================================================
          PROPERTY MAINTENANCE
-         =================================================== -->
+         ========================================================= -->
 
     <section
       class="service-detail-section"
-      id="maintenance"
+      id="property-maintenance"
     >
 
       <article class="service-detail">
@@ -1176,7 +1136,7 @@
         <div class="service-detail-heading">
 
           <img
-            src="Property Maintenance.jpg"
+            src="Property-Maintenance.jpg"
             alt="Property maintenance services"
             loading="lazy"
           >
@@ -1190,8 +1150,8 @@
           </h2>
 
           <p>
-            General maintenance and repair work to help
-            keep your property functional and cared for.
+            General maintenance and repair work to help keep your
+            property functional and cared for.
           </p>
 
         </div>
@@ -1200,10 +1160,10 @@
         <div class="service-detail-content">
 
           <p>
-            Small maintenance issues can build up over
-            time. Pioneer Works can help with a range of
-            practical property maintenance and repair
-            tasks around residential properties.
+            Small maintenance issues can build up over time.
+            Pioneer Works can help with a range of practical
+            property maintenance and repair tasks around
+            residential properties.
           </p>
 
           <h3>
@@ -1221,12 +1181,14 @@
 
           </ul>
 
+
           <div class="service-note">
-            Not sure whether your job fits this category?
-            Send us a description of what needs attention
-            and we can determine whether it is work
-            Pioneer Works can assist with.
+            Not sure whether your job fits this category? Send us
+            a description of what needs attention and we can
+            determine whether it is work Pioneer Works can
+            assist with.
           </div>
+
 
           <div class="service-actions">
 
@@ -1254,13 +1216,13 @@
     </section>
 
 
-    <!-- ===================================================
+    <!-- =========================================================
          HOME IMPROVEMENTS
-         =================================================== -->
+         ========================================================= -->
 
     <section
       class="service-detail-section"
-      id="improvements"
+      id="home-improvements"
     >
 
       <article class="service-detail">
@@ -1269,7 +1231,7 @@
         <div class="service-detail-heading">
 
           <img
-            src="Home Improvements.jpg"
+            src="Home-Improvements.jpg"
             alt="Home improvement services"
             loading="lazy"
           >
@@ -1283,9 +1245,8 @@
           </h2>
 
           <p>
-            Practical improvement projects that can help
-            refresh and enhance different areas of your
-            property.
+            Practical improvement projects that can help refresh
+            and enhance different areas of your property.
           </p>
 
         </div>
@@ -1294,10 +1255,9 @@
         <div class="service-detail-content">
 
           <p>
-            Sometimes a property does not need a major
-            renovation — it simply needs practical
-            improvements that make an area look better,
-            work better or feel more complete.
+            Sometimes a property does not need a major renovation —
+            it simply needs practical improvements that make an area
+            look better, work better or feel more complete.
           </p>
 
           <h3>
@@ -1315,12 +1275,13 @@
 
           </ul>
 
+
           <div class="service-note">
-            Home improvement projects vary widely. Tell
-            us what you would like to change or improve
-            and provide photos or project information
-            where possible.
+            Home improvement projects vary widely. Tell us what
+            you would like to change or improve and provide photos
+            or project information where possible.
           </div>
+
 
           <div class="service-actions">
 
@@ -1348,13 +1309,13 @@
     </section>
 
 
-    <!-- ===================================================
+    <!-- =========================================================
          HANDYMAN SERVICES
-         =================================================== -->
+         ========================================================= -->
 
     <section
       class="service-detail-section"
-      id="handyman"
+      id="handyman-services"
     >
 
       <article class="service-detail">
@@ -1363,7 +1324,7 @@
         <div class="service-detail-heading">
 
           <img
-            src="Handyman Services.jpg"
+            src="Handyman-Services.jpg"
             alt="Handyman and general repair services"
             loading="lazy"
           >
@@ -1377,8 +1338,8 @@
           </h2>
 
           <p>
-            Practical help with smaller repairs, fixes
-            and general jobs around your property.
+            Practical help with smaller repairs, fixes and general
+            jobs around your property.
           </p>
 
         </div>
@@ -1387,10 +1348,10 @@
         <div class="service-detail-content">
 
           <p>
-            Not every property job is a large project.
-            Smaller repairs and practical jobs still need
-            proper attention, and Pioneer Works can discuss
-            a range of general handyman tasks.
+            Not every property job is a large project. Smaller
+            repairs and practical jobs still need proper attention,
+            and Pioneer Works can discuss a range of general
+            handyman tasks.
           </p>
 
           <h3>
@@ -1408,12 +1369,13 @@
 
           </ul>
 
+
           <div class="service-note">
-            If your job is not listed, send us a short
-            description. We can let you know whether it
-            falls within the work Pioneer Works can
-            assist with.
+            If your job is not listed, send us a short description.
+            We can let you know whether it falls within the work
+            Pioneer Works can assist with.
           </div>
+
 
           <div class="service-actions">
 
@@ -1441,9 +1403,9 @@
     </section>
 
 
-    <!-- ===================================================
+    <!-- =========================================================
          SOMETHING ELSE?
-         =================================================== -->
+         ========================================================= -->
 
     <section class="not-listed">
 
@@ -1460,13 +1422,13 @@
           </h2>
 
           <p>
-            Property jobs do not always fit neatly into
-            one category. If you have a repair,
-            maintenance or improvement project that is
-            not specifically listed above, send us the
-            details and we can discuss whether Pioneer
-            Works can help.
+            Property jobs do not always fit neatly into one
+            category. If you have a repair, maintenance or
+            improvement project that is not specifically listed
+            above, send us the details and we can discuss whether
+            Pioneer Works may be able to help.
           </p>
+
 
           <div class="not-listed-actions">
 
@@ -1493,9 +1455,9 @@
     </section>
 
 
-    <!-- ===================================================
+    <!-- =========================================================
          WHY PIONEER WORKS
-         =================================================== -->
+         ========================================================= -->
 
     <section class="why-band">
 
@@ -1510,12 +1472,13 @@
         </h2>
 
         <p class="section-subtitle">
-          We aim to make it easy to discuss the work your
-          property needs and understand the next step.
+          We aim to make it easy to discuss the work your property
+          needs and understand the next step.
         </p>
 
 
         <div class="why-grid">
+
 
           <div class="why-card">
 
@@ -1524,8 +1487,8 @@
             </h3>
 
             <p>
-              Straightforward communication about your
-              project and what you need.
+              Straightforward communication about your project
+              and what you need.
             </p>
 
           </div>
@@ -1538,8 +1501,8 @@
             </h3>
 
             <p>
-              Solutions focused on the actual work your
-              property requires.
+              Solutions focused on the actual work your property
+              requires.
             </p>
 
           </div>
@@ -1552,8 +1515,8 @@
             </h3>
 
             <p>
-              A broad range of property work available
-              through one business.
+              A broad range of property work available through
+              one business.
             </p>
 
           </div>
@@ -1566,11 +1529,11 @@
             </h3>
 
             <p>
-              Serving Auckland, Waikato and the
-              Bay of Plenty.
+              Serving Auckland, Waikato and Bay of Plenty.
             </p>
 
           </div>
+
 
         </div>
 
@@ -1579,9 +1542,9 @@
     </section>
 
 
-    <!-- ===================================================
+    <!-- =========================================================
          FINAL CTA
-         =================================================== -->
+         ========================================================= -->
 
     <section class="cta">
 
@@ -1592,14 +1555,16 @@
         </h2>
 
         <p>
-          Tell us about your project, where the property
-          is located and the work you would like completed.
-          You can request a quote online or contact
-          Pioneer Works directly.
+          Tell us about your project, where the property is located
+          and the work you would like completed. You can request a
+          quote online or contact Pioneer Works directly.
         </p>
 
 
-        <div class="hero-buttons">
+        <div
+          class="hero-buttons"
+          style="justify-content:center;"
+        >
 
           <a
             href="quote.html"
@@ -1625,14 +1590,16 @@
   </main>
 
 
-  <!-- =====================================================
+  <!-- =========================================================
        FOOTER
-       ===================================================== -->
+       ========================================================= -->
 
   <footer>
 
     <div class="footer-grid">
 
+
+      <!-- COMPANY -->
 
       <div>
 
@@ -1643,12 +1610,50 @@
         >
 
         <p>
-          Practical property services across Auckland,
-          Waikato and the Bay of Plenty.
+          Painting, fencing, decks, property maintenance,
+          home improvements and handyman services across
+          Auckland, Waikato and Bay of Plenty.
         </p>
 
       </div>
 
+
+      <!-- SERVICES -->
+
+      <div>
+
+        <h3>
+          Services
+        </h3>
+
+        <a href="#painting">
+          Painting
+        </a>
+
+        <a href="#fencing">
+          Fencing
+        </a>
+
+        <a href="#decks">
+          Decks
+        </a>
+
+        <a href="#property-maintenance">
+          Property Maintenance
+        </a>
+
+        <a href="#home-improvements">
+          Home Improvements
+        </a>
+
+        <a href="#handyman-services">
+          Handyman Services
+        </a>
+
+      </div>
+
+
+      <!-- QUICK LINKS -->
 
       <div>
 
@@ -1683,38 +1688,7 @@
       </div>
 
 
-      <div>
-
-        <h3>
-          Services
-        </h3>
-
-        <a href="#painting">
-          Painting
-        </a>
-
-        <a href="#fencing">
-          Fencing
-        </a>
-
-        <a href="#decks">
-          Decks
-        </a>
-
-        <a href="#maintenance">
-          Property Maintenance
-        </a>
-
-        <a href="#improvements">
-          Home Improvements
-        </a>
-
-        <a href="#handyman">
-          Handyman Services
-        </a>
-
-      </div>
-
+      <!-- CONTACT -->
 
       <div>
 
@@ -1735,7 +1709,7 @@
         </a>
 
         <p>
-          Auckland • Waikato • Bay of Plenty
+          Auckland &bull; Waikato &bull; Bay of Plenty
         </p>
 
       </div>
@@ -1746,14 +1720,16 @@
 
     <div class="copyright">
 
-      © <span class="current-year">2026</span>
-      Pioneer Works Limited.
+      &copy; 2026 Pioneer Works Limited.
       All rights reserved.
 
-      &nbsp; • &nbsp;
+      <br>
 
-      <a href="privacy.html">
-        Privacy Policy
+      <a
+        href="privacy.html"
+        style="display:inline-block; margin-top:6px;"
+      >
+        Privacy Policy &bull; Terms of Use &bull; Website Disclaimer
       </a>
 
     </div>
@@ -1762,6 +1738,7 @@
 
 
   <script src="script.js"></script>
+
 
 </body>
 
