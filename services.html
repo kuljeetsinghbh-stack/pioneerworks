@@ -41,22 +41,18 @@
 
     .page-hero {
       position: relative;
-
       min-height: 430px;
-
       display: flex;
       align-items: center;
-
       padding: 75px 20px;
-
       color: white;
 
       background:
         linear-gradient(
           90deg,
-          rgba(0, 31, 77, 0.97) 0%,
-          rgba(0, 43, 99, 0.91) 48%,
-          rgba(0, 43, 99, 0.45) 100%
+          rgba(0,31,77,0.97) 0%,
+          rgba(0,43,99,0.91) 48%,
+          rgba(0,43,99,0.45) 100%
         ),
         url("hero-home.jpeg");
 
@@ -66,15 +62,14 @@
 
     .page-hero::after {
       content: "";
-
       position: absolute;
       inset: 0;
 
       background:
         linear-gradient(
           180deg,
-          rgba(0, 0, 0, 0.01),
-          rgba(0, 0, 0, 0.10)
+          rgba(0,0,0,0.01),
+          rgba(0,0,0,0.10)
         );
 
       pointer-events: none;
@@ -82,49 +77,39 @@
 
     .page-hero-inner {
       position: relative;
-
       z-index: 2;
-
       width: 100%;
       max-width: 1200px;
-
       margin: auto;
     }
 
     .page-hero .section-label {
       text-align: left;
-
       color: var(--gold-light);
-
       margin-bottom: 14px;
     }
 
     .page-hero h1 {
       max-width: 760px;
-
       color: white;
-
-      font-size: clamp(42px, 6vw, 64px);
+      font-size: clamp(42px,6vw,64px);
       font-weight: 900;
-
       line-height: 1.05;
-
       letter-spacing: -1px;
-
       margin-bottom: 20px;
     }
 
     .page-hero p {
       max-width: 720px;
-
-      color: rgba(255, 255, 255, 0.92);
-
+      color: rgba(255,255,255,0.92);
       font-size: 18px;
       line-height: 1.75;
     }
 
 
-    /* INTRO */
+    /* =====================================================
+       INTRO
+       ===================================================== */
 
     .services-intro {
       background: white;
@@ -132,11 +117,8 @@
 
     .services-intro-grid {
       display: grid;
-
       grid-template-columns: 1fr 1fr;
-
       gap: 50px;
-
       align-items: center;
     }
 
@@ -151,55 +133,42 @@
 
     .services-intro-copy p {
       color: var(--muted);
-
       margin-bottom: 17px;
     }
 
     .services-summary {
       display: grid;
-
       grid-template-columns: 1fr 1fr;
-
       gap: 15px;
     }
 
     .summary-item {
       position: relative;
-
       background: var(--soft);
-
       border: 1px solid var(--border);
-
       border-radius: 12px;
-
       padding: 20px 18px 20px 43px;
-
       color: var(--deep-blue);
-
       font-weight: 800;
     }
 
     .summary-item::before {
       content: "✓";
-
       position: absolute;
-
       left: 18px;
       top: 19px;
-
       color: var(--gold);
-
       font-weight: 900;
     }
 
 
-    /* INDIVIDUAL SERVICES */
+    /* =====================================================
+       INDIVIDUAL SERVICES
+       ===================================================== */
 
     .service-detail-section {
       padding: 0 20px 80px;
-
       background: white;
-
       scroll-margin-top: 130px;
     }
 
@@ -209,74 +178,150 @@
 
     .service-detail {
       max-width: 1200px;
-
       margin: auto;
 
       display: grid;
-
-      grid-template-columns: 0.72fr 1.28fr;
+      grid-template-columns: 0.78fr 1.22fr;
 
       overflow: hidden;
 
       background: white;
 
       border: 1px solid var(--border);
-
       border-radius: 18px;
 
       box-shadow: var(--shadow);
     }
 
+
+    /* =====================================================
+       SERVICE PHOTO
+       ===================================================== */
+
     .service-detail-heading {
       position: relative;
 
-      min-height: 100%;
+      min-height: 500px;
 
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-end;
 
-      padding: 45px 38px;
+      padding: 38px;
+
+      overflow: hidden;
+      isolation: isolate;
+
+      color: white;
+      background: var(--deep-blue);
+    }
+
+
+    /* Elegant navy gradient over bottom of image */
+
+    .service-detail-heading::after {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      z-index: -1;
 
       background:
         linear-gradient(
-          145deg,
-          var(--navy),
-          var(--deep-blue)
+          180deg,
+          rgba(0,31,77,0.03) 18%,
+          rgba(0,31,77,0.28) 54%,
+          rgba(0,31,77,0.92) 100%
         );
 
-      color: white;
+      pointer-events: none;
     }
 
+
+    /* Actual service image */
+
+    .service-detail-heading img {
+      position: absolute;
+      inset: 0;
+
+      z-index: -2;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+      object-position: center;
+
+      transition: transform 0.45s ease;
+    }
+
+
+    /* Very subtle professional hover */
+
+    .service-detail:hover .service-detail-heading img {
+      transform: scale(1.025);
+    }
+
+
+    /* Small service category */
+
     .service-number {
+      position: relative;
+      z-index: 1;
+
       color: var(--gold-light);
 
       font-size: 13px;
       font-weight: 900;
 
       letter-spacing: 2px;
-
       text-transform: uppercase;
 
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
+
+    /* Service name */
+
     .service-detail-heading h2 {
+      position: relative;
+      z-index: 1;
+
       color: white;
 
-      font-size: clamp(30px, 4vw, 40px);
+      font-size: clamp(30px,4vw,40px);
       font-weight: 900;
 
       line-height: 1.15;
 
-      margin-bottom: 15px;
+      margin-bottom: 13px;
+
+      text-shadow:
+        0 2px 14px rgba(0,0,0,0.22);
     }
+
+
+    /* Text over photo */
 
     .service-detail-heading p {
-      color: rgba(255, 255, 255, 0.80);
+      position: relative;
+      z-index: 1;
+
+      max-width: 340px;
+
+      color: rgba(255,255,255,0.90);
 
       font-size: 15px;
+      line-height: 1.7;
+
+      margin: 0;
     }
+
+
+    /* =====================================================
+       SERVICE INFORMATION
+       ===================================================== */
 
     .service-detail-content {
       padding: 45px;
@@ -284,25 +329,22 @@
 
     .service-detail-content > p {
       color: var(--muted);
-
       font-size: 16px;
-
       margin-bottom: 24px;
     }
 
     .service-detail-content h3 {
       color: var(--deep-blue);
-
       font-size: 18px;
       font-weight: 900;
-
       margin-bottom: 15px;
     }
 
     .service-list {
       display: grid;
 
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns:
+        repeat(2,minmax(0,1fr));
 
       gap: 12px 28px;
 
@@ -334,10 +376,14 @@
       font-weight: 900;
     }
 
+
+    /* NOTE BOX */
+
     .service-note {
       background: var(--soft-gold);
 
-      border-left: 4px solid var(--gold);
+      border-left:
+        4px solid var(--gold);
 
       border-radius: 7px;
 
@@ -350,16 +396,18 @@
       margin-bottom: 24px;
     }
 
+
+    /* BUTTONS */
+
     .service-actions {
       display: flex;
-
       flex-wrap: wrap;
-
       gap: 12px;
     }
 
     .service-call {
       display: inline-flex;
+
       align-items: center;
       justify-content: center;
 
@@ -367,7 +415,8 @@
 
       padding: 13px 24px;
 
-      border: 2px solid var(--deep-blue);
+      border:
+        2px solid var(--deep-blue);
 
       border-radius: 8px;
 
@@ -381,14 +430,14 @@
 
     .service-call:hover {
       background: var(--deep-blue);
-
       color: white;
-
       transform: translateY(-2px);
     }
 
 
-    /* NOT SURE SECTION */
+    /* =====================================================
+       NOT LISTED
+       ===================================================== */
 
     .not-listed {
       background: var(--light);
@@ -404,7 +453,6 @@
       background: white;
 
       border: 1px solid var(--border);
-
       border-radius: 18px;
 
       box-shadow: var(--shadow);
@@ -415,7 +463,8 @@
     .not-listed-box h2 {
       color: var(--deep-blue);
 
-      font-size: clamp(29px, 4vw, 38px);
+      font-size:
+        clamp(29px,4vw,38px);
 
       margin-bottom: 15px;
     }
@@ -423,7 +472,8 @@
     .not-listed-box p {
       max-width: 700px;
 
-      margin: 0 auto 25px;
+      margin:
+        0 auto 25px;
 
       color: var(--muted);
     }
@@ -438,9 +488,11 @@
     }
 
 
-    /* RESPONSIVE */
+    /* =====================================================
+       RESPONSIVE
+       ===================================================== */
 
-    @media (max-width: 900px) {
+    @media(max-width:900px) {
 
       .page-hero {
         min-height: auto;
@@ -452,8 +504,8 @@
         background:
           linear-gradient(
             120deg,
-            rgba(0, 31, 77, 0.98),
-            rgba(0, 63, 143, 0.94)
+            rgba(0,31,77,0.98),
+            rgba(0,63,143,0.94)
           );
       }
 
@@ -469,7 +521,6 @@
 
       .services-intro-grid {
         grid-template-columns: 1fr;
-
         gap: 35px;
       }
 
@@ -487,6 +538,7 @@
       }
 
       .service-detail-heading {
+        min-height: 390px;
         padding: 35px 32px;
       }
 
@@ -497,7 +549,7 @@
     }
 
 
-    @media (max-width: 600px) {
+    @media(max-width:600px) {
 
       .page-hero {
         padding: 60px 18px;
@@ -521,14 +573,17 @@
         padding-bottom: 55px;
       }
 
-      .service-detail-heading,
+      .service-detail-heading {
+        min-height: 330px;
+        padding: 28px 22px;
+      }
+
       .service-detail-content {
         padding: 28px 22px;
       }
 
       .service-list {
         grid-template-columns: 1fr;
-
         gap: 11px;
       }
 
@@ -593,9 +648,9 @@
           info@pioneerworks.co.nz
         </a>
 
-        &nbsp; • &nbsp;
+        &nbsp; | &nbsp;
 
-        <a href="tel:0212839995">
+        <a href="tel:+64212839995">
           021 283 9995
         </a>
 
@@ -701,7 +756,7 @@
 
 
     <!-- ===================================================
-         PAGE HERO
+         HERO
          =================================================== -->
 
     <section class="page-hero">
@@ -738,7 +793,7 @@
           </a>
 
           <a
-            href="tel:0212839995"
+            href="tel:+64212839995"
             class="btn-secondary"
           >
             Call 021 283 9995
@@ -752,7 +807,7 @@
 
 
     <!-- ===================================================
-         SERVICES INTRODUCTION
+         INTRODUCTION
          =================================================== -->
 
     <section class="services-intro">
@@ -842,6 +897,12 @@
 
         <div class="service-detail-heading">
 
+          <img
+            src="Painting.jpg"
+            alt="Painting services"
+            loading="lazy"
+          >
+
           <p class="service-number">
             Painting Services
           </p>
@@ -852,8 +913,7 @@
 
           <p>
             Refresh the appearance of your property with
-            practical interior and exterior painting
-            services.
+            practical interior and exterior painting services.
           </p>
 
         </div>
@@ -874,29 +934,12 @@
 
           <ul class="service-list">
 
-            <li>
-              Interior painting
-            </li>
-
-            <li>
-              Exterior painting
-            </li>
-
-            <li>
-              Walls and ceilings
-            </li>
-
-            <li>
-              Doors and trim
-            </li>
-
-            <li>
-              Repainting existing surfaces
-            </li>
-
-            <li>
-              General painting projects
-            </li>
+            <li>Interior painting</li>
+            <li>Exterior painting</li>
+            <li>Walls and ceilings</li>
+            <li>Doors and trim</li>
+            <li>Repainting existing surfaces</li>
+            <li>General painting projects</li>
 
           </ul>
 
@@ -916,7 +959,7 @@
             </a>
 
             <a
-              href="tel:0212839995"
+              href="tel:+64212839995"
               class="service-call"
             >
               Call 021 283 9995
@@ -945,6 +988,12 @@
 
 
         <div class="service-detail-heading">
+
+          <img
+            src="Fencing.jpg"
+            alt="Fencing services"
+            loading="lazy"
+          >
 
           <p class="service-number">
             Fencing Services
@@ -977,29 +1026,12 @@
 
           <ul class="service-list">
 
-            <li>
-              New fence construction
-            </li>
-
-            <li>
-              Existing fence repairs
-            </li>
-
-            <li>
-              Replacement of damaged sections
-            </li>
-
-            <li>
-              Timber fencing projects
-            </li>
-
-            <li>
-              Fence maintenance
-            </li>
-
-            <li>
-              General residential fencing work
-            </li>
+            <li>New fence construction</li>
+            <li>Existing fence repairs</li>
+            <li>Replacement of damaged sections</li>
+            <li>Timber fencing projects</li>
+            <li>Fence maintenance</li>
+            <li>General residential fencing work</li>
 
           </ul>
 
@@ -1020,7 +1052,7 @@
             </a>
 
             <a
-              href="tel:0212839995"
+              href="tel:+64212839995"
               class="service-call"
             >
               Call 021 283 9995
@@ -1049,6 +1081,12 @@
 
 
         <div class="service-detail-heading">
+
+          <img
+            src="Decking.jpg"
+            alt="Deck construction and repair services"
+            loading="lazy"
+          >
 
           <p class="service-number">
             Deck Services
@@ -1081,29 +1119,12 @@
 
           <ul class="service-list">
 
-            <li>
-              New deck construction
-            </li>
-
-            <li>
-              Deck repairs
-            </li>
-
-            <li>
-              Replacement of damaged boards
-            </li>
-
-            <li>
-              Deck maintenance
-            </li>
-
-            <li>
-              Existing deck improvements
-            </li>
-
-            <li>
-              Deck restoration work
-            </li>
+            <li>New deck construction</li>
+            <li>Deck repairs</li>
+            <li>Replacement of damaged boards</li>
+            <li>Deck maintenance</li>
+            <li>Existing deck improvements</li>
+            <li>Deck restoration work</li>
 
           </ul>
 
@@ -1124,7 +1145,7 @@
             </a>
 
             <a
-              href="tel:0212839995"
+              href="tel:+64212839995"
               class="service-call"
             >
               Call 021 283 9995
@@ -1153,6 +1174,12 @@
 
 
         <div class="service-detail-heading">
+
+          <img
+            src="Property Maintenance.jpg"
+            alt="Property maintenance services"
+            loading="lazy"
+          >
 
           <p class="service-number">
             Property Care
@@ -1185,29 +1212,12 @@
 
           <ul class="service-list">
 
-            <li>
-              General property repairs
-            </li>
-
-            <li>
-              Minor maintenance work
-            </li>
-
-            <li>
-              Timber repairs
-            </li>
-
-            <li>
-              Exterior maintenance tasks
-            </li>
-
-            <li>
-              Repairs around the home
-            </li>
-
-            <li>
-              Ongoing property upkeep tasks
-            </li>
+            <li>General property repairs</li>
+            <li>Minor maintenance work</li>
+            <li>Timber repairs</li>
+            <li>Exterior maintenance tasks</li>
+            <li>Repairs around the home</li>
+            <li>Ongoing property upkeep tasks</li>
 
           </ul>
 
@@ -1228,7 +1238,7 @@
             </a>
 
             <a
-              href="tel:0212839995"
+              href="tel:+64212839995"
               class="service-call"
             >
               Call 021 283 9995
@@ -1257,6 +1267,12 @@
 
 
         <div class="service-detail-heading">
+
+          <img
+            src="Home Improvements.jpg"
+            alt="Home improvement services"
+            loading="lazy"
+          >
 
           <p class="service-number">
             Improving Your Property
@@ -1290,29 +1306,12 @@
 
           <ul class="service-list">
 
-            <li>
-              General home improvements
-            </li>
-
-            <li>
-              Property refresh projects
-            </li>
-
-            <li>
-              Small improvement projects
-            </li>
-
-            <li>
-              Interior improvement work
-            </li>
-
-            <li>
-              Exterior improvement work
-            </li>
-
-            <li>
-              Repairs as part of improvements
-            </li>
+            <li>General home improvements</li>
+            <li>Property refresh projects</li>
+            <li>Small improvement projects</li>
+            <li>Interior improvement work</li>
+            <li>Exterior improvement work</li>
+            <li>Repairs as part of improvements</li>
 
           </ul>
 
@@ -1333,7 +1332,7 @@
             </a>
 
             <a
-              href="tel:0212839995"
+              href="tel:+64212839995"
               class="service-call"
             >
               Call 021 283 9995
@@ -1362,6 +1361,12 @@
 
 
         <div class="service-detail-heading">
+
+          <img
+            src="Handyman Services.jpg"
+            alt="Handyman and general repair services"
+            loading="lazy"
+          >
 
           <p class="service-number">
             General Repairs
@@ -1394,29 +1399,12 @@
 
           <ul class="service-list">
 
-            <li>
-              General household repairs
-            </li>
-
-            <li>
-              Minor property fixes
-            </li>
-
-            <li>
-              Small maintenance jobs
-            </li>
-
-            <li>
-              Minor timber repairs
-            </li>
-
-            <li>
-              General improvement tasks
-            </li>
-
-            <li>
-              Other practical property jobs
-            </li>
+            <li>General household repairs</li>
+            <li>Minor property fixes</li>
+            <li>Small maintenance jobs</li>
+            <li>Minor timber repairs</li>
+            <li>General improvement tasks</li>
+            <li>Other practical property jobs</li>
 
           </ul>
 
@@ -1437,7 +1425,7 @@
             </a>
 
             <a
-              href="tel:0212839995"
+              href="tel:+64212839995"
               class="service-call"
             >
               Call 021 283 9995
@@ -1479,7 +1467,6 @@
             details and we can discuss whether Pioneer
             Works can help.
           </p>
-
 
           <div class="not-listed-actions">
 
@@ -1622,7 +1609,7 @@
           </a>
 
           <a
-            href="tel:0212839995"
+            href="tel:+64212839995"
             class="btn-secondary"
           >
             Call 021 283 9995
@@ -1735,7 +1722,7 @@
           Contact
         </h3>
 
-        <a href="tel:0212839995">
+        <a href="tel:+64212839995">
           021 283 9995
         </a>
 
@@ -1773,10 +1760,6 @@
 
   </footer>
 
-
-  <!-- =====================================================
-       JAVASCRIPT
-       ===================================================== -->
 
   <script src="script.js"></script>
 
