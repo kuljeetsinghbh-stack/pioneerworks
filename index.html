@@ -3,133 +3,66 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>
-    Pioneer Works Limited | Painting, Fencing, Decks & Property Services NZ
-  </title>
+  <title>Pioneer Works Limited | Painting, Fencing, Decks & Property Services NZ</title>
 
   <meta
     name="description"
-    content="Pioneer Works Limited provides painting, fencing, deck building and repairs, property maintenance, home improvements and handyman services across Auckland, Waikato and Bay of Plenty. Request a free quote."
+    content="Pioneer Works Limited provides painting, fencing, deck building, property maintenance, home improvements and handyman services across Auckland, Waikato and Bay of Plenty."
   >
 
-  <meta
-    name="robots"
-    content="index, follow"
-  >
-
-  <meta
-    name="theme-color"
-    content="#002b63"
-  >
-
-  <link
-    rel="stylesheet"
-    href="styles.css"
-  >
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 
 <body>
 
-  <!-- =====================================================
-       ACCESSIBILITY
-       ===================================================== -->
-
-  <a
-    class="skip-link"
-    href="#main-content"
-  >
-    Skip to main content
-  </a>
-
-
-  <!-- =====================================================
+  <!-- ======================================================
        TOP BAR
-       ===================================================== -->
+  ======================================================= -->
 
   <div class="top-bar">
-
     <div class="top-bar-inner">
 
-      <span>
-        Serving Auckland • Waikato • Bay of Plenty
-      </span>
+      <div>
+        Auckland &bull; Waikato &bull; Bay of Plenty
+      </div>
 
-      <span>
+      <div>
         <a href="mailto:info@pioneerworks.co.nz">
           info@pioneerworks.co.nz
         </a>
-        &nbsp; • &nbsp;
-        <a href="tel:0212839995">
+
+        &nbsp; | &nbsp;
+
+        <a href="tel:+64212839995">
           021 283 9995
         </a>
-      </span>
+      </div>
 
     </div>
-
   </div>
 
 
-  <!-- =====================================================
-       HEADER
-       ===================================================== -->
+  <!-- ======================================================
+       HEADER / NAVIGATION
+  ======================================================= -->
 
   <header>
 
     <div class="nav-wrap">
 
-      <a
-        class="logo"
-        href="index.html"
-        aria-label="Pioneer Works Limited home"
-      >
+      <a href="index.html" class="logo" aria-label="Pioneer Works Limited home">
         <img
           src="logo.png"
           alt="Pioneer Works Limited"
         >
       </a>
 
+      <nav aria-label="Main navigation">
 
-      <!-- Mobile menu button -->
-
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
-        aria-controls="main-navigation"
-      >
-
-        <span
-          class="menu-toggle-lines"
-          aria-hidden="true"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-
-      </button>
-
-
-      <!-- Main navigation -->
-
-      <nav
-        id="main-navigation"
-        aria-label="Main navigation"
-      >
-
-        <a
-          href="index.html"
-          class="active"
-          aria-current="page"
-        >
+        <a href="index.html" class="active">
           Home
         </a>
 
@@ -149,10 +82,7 @@
           Contact Us
         </a>
 
-        <a
-          href="quote.html"
-          class="quote-btn"
-        >
+        <a href="quote.html" class="quote-btn">
           Get a Free Quote
         </a>
 
@@ -163,91 +93,84 @@
   </header>
 
 
-  <!-- =====================================================
-       MAIN CONTENT
-       ===================================================== -->
-
-  <main id="main-content">
+  <main>
 
 
-    <!-- ===================================================
+    <!-- ======================================================
          HERO
-         =================================================== -->
+    ======================================================= -->
 
-    <section class="hero">
+    <section
+      class="hero"
+      style="
+        background-image:
+          linear-gradient(
+            90deg,
+            rgba(0,31,77,0.96) 0%,
+            rgba(0,43,99,0.88) 42%,
+            rgba(0,43,99,0.35) 100%
+          ),
+          url('hero-home.jpeg');
+        background-size:cover;
+        background-position:center;
+      "
+    >
 
       <div class="hero-inner">
 
-        <p class="company-name">
+        <div class="company-name">
           Pioneer Works Limited
-        </p>
+        </div>
 
         <h1>
           Reliable Work.<br>
           Done Right.
         </h1>
 
-        <div
-          class="gold-line"
-          aria-hidden="true"
-        ></div>
+        <div class="gold-line"></div>
 
         <p>
-          Practical property services for homes and
-          properties across Auckland, Waikato and the
-          Bay of Plenty — from painting and fencing to
-          decks, maintenance, improvements and general
-          repairs.
+          Practical property services for homes and properties across
+          Auckland, Waikato and Bay of Plenty.
         </p>
-
 
         <div class="hero-buttons">
 
-          <a
-            href="quote.html"
-            class="btn-primary"
-          >
-            Request a Free Quote
+          <a href="quote.html" class="btn-primary">
+            Get a Free Quote
           </a>
 
-          <a
-            href="tel:0212839995"
-            class="btn-secondary"
-          >
-            Call 021 283 9995
+          <a href="services.html" class="btn-secondary">
+            Explore Our Services
           </a>
 
         </div>
 
+        <div class="hero-features">
 
-        <div
-          class="hero-features"
-          aria-label="Pioneer Works services"
-        >
-
-          <span class="hero-feature">
+          <div class="hero-feature">
             Painting
-          </span>
+          </div>
 
-          <span class="hero-feature">
+          <div class="hero-feature">
             Fencing
-          </span>
+          </div>
 
-          <span class="hero-feature">
+          <div class="hero-feature">
             Decks
-          </span>
+          </div>
 
-          <span class="hero-feature">
+          <div class="hero-feature">
             Property Maintenance
-          </span>
+          </div>
 
-          <span class="hero-feature">
+          <div class="hero-feature">
             Home Improvements
-          </span>
+          </div>
 
-          <span class="hero-feature">
+          <div class="hero-feature">
             Handyman Services
-          </span>
+          </div>
 
         </div>
 
@@ -256,196 +179,238 @@
     </section>
 
 
-    <!-- ===================================================
-         SERVICES
-         =================================================== -->
 
-    <section>
+    <!-- ======================================================
+         SERVICES
+    ======================================================= -->
+
+    <section class="services-section">
 
       <div class="container">
 
-        <p class="section-label">
+        <div class="section-label">
           What We Do
-        </p>
+        </div>
 
         <h2 class="section-title">
           Property Services You Can Rely On
         </h2>
 
         <p class="section-subtitle">
-          Whether you need to refresh, repair, maintain
-          or improve your property, Pioneer Works provides
-          practical solutions across a range of residential
-          property projects.
+          From painting and fencing to decks, repairs and everyday property
+          maintenance, Pioneer Works provides practical services to help
+          maintain and improve your property.
         </p>
 
 
         <div class="services-grid">
 
 
-          <!-- Painting -->
+          <!-- PAINTING -->
 
-          <article class="service-card">
+          <article class="service-card service-card-photo">
 
-            <div
-              class="service-icon"
-              aria-hidden="true"
-            >
-              🖌️
+            <div class="service-card-image">
+
+              <img
+                src="Painting.jpg"
+                alt="Painting tools representing Pioneer Works painting services"
+                loading="lazy"
+              >
+
             </div>
 
-            <h3>
-              Painting
-            </h3>
+            <div class="service-card-content">
 
-            <p>
-              Interior and exterior painting to refresh,
-              protect and improve the appearance of your
-              property.
-            </p>
+              <h3>
+                Painting
+              </h3>
 
-            <a href="services.html#painting">
-              Explore Painting Services →
-            </a>
+              <p>
+                Interior and exterior painting to refresh, protect and
+                improve the appearance of your property.
+              </p>
+
+              <a href="services.html#painting">
+                Explore Painting Services &rarr;
+              </a>
+
+            </div>
 
           </article>
 
 
-          <!-- Fencing -->
 
-          <article class="service-card">
+          <!-- FENCING -->
 
-            <div
-              class="service-icon"
-              aria-hidden="true"
-            >
-              🏡
+          <article class="service-card service-card-photo">
+
+            <div class="service-card-image">
+
+              <img
+                src="Fencing.jpg"
+                alt="Timber fencing work representing Pioneer Works fencing services"
+                loading="lazy"
+              >
+
             </div>
 
-            <h3>
-              Fencing
-            </h3>
+            <div class="service-card-content">
 
-            <p>
-              New fence construction, repairs and practical
-              fencing solutions for residential properties.
-            </p>
+              <h3>
+                Fencing
+              </h3>
 
-            <a href="services.html#fencing">
-              Explore Fencing Services →
-            </a>
+              <p>
+                New fence construction, repairs and practical fencing
+                solutions for residential properties.
+              </p>
+
+              <a href="services.html#fencing">
+                Explore Fencing Services &rarr;
+              </a>
+
+            </div>
 
           </article>
 
 
-          <!-- Decks -->
 
-          <article class="service-card">
+          <!-- DECKS -->
 
-            <div
-              class="service-icon"
-              aria-hidden="true"
-            >
-              🪵
+          <article class="service-card service-card-photo">
+
+            <div class="service-card-image">
+
+              <img
+                src="Decking.jpg"
+                alt="Timber deck construction representing Pioneer Works deck services"
+                loading="lazy"
+              >
+
             </div>
 
-            <h3>
-              Decks
-            </h3>
+            <div class="service-card-content">
 
-            <p>
-              Deck construction, repairs and restoration
-              work to help create functional and enjoyable
-              outdoor spaces.
-            </p>
+              <h3>
+                Decks
+              </h3>
 
-            <a href="services.html#decks">
-              Explore Deck Services →
-            </a>
+              <p>
+                Deck construction, repairs and restoration work to help
+                create functional and enjoyable outdoor spaces.
+              </p>
+
+              <a href="services.html#decks">
+                Explore Deck Services &rarr;
+              </a>
+
+            </div>
 
           </article>
 
 
-          <!-- Property Maintenance -->
 
-          <article class="service-card">
+          <!-- PROPERTY MAINTENANCE -->
 
-            <div
-              class="service-icon"
-              aria-hidden="true"
-            >
-              🔧
+          <article class="service-card service-card-photo">
+
+            <div class="service-card-image">
+
+              <img
+                src="Property-Maintenance.jpg"
+                alt="Property repair tools representing Pioneer Works property maintenance services"
+                loading="lazy"
+              >
+
             </div>
 
-            <h3>
-              Property Maintenance
-            </h3>
+            <div class="service-card-content">
 
-            <p>
-              General property upkeep and repair work to
-              help keep your home or property maintained
-              and functional.
-            </p>
+              <h3>
+                Property Maintenance
+              </h3>
 
-            <a href="services.html#maintenance">
-              Explore Maintenance Services →
-            </a>
+              <p>
+                General property upkeep and repair work to help keep your
+                home or property maintained and functional.
+              </p>
+
+              <a href="services.html#property-maintenance">
+                Explore Maintenance Services &rarr;
+              </a>
+
+            </div>
 
           </article>
 
 
-          <!-- Home Improvements -->
 
-          <article class="service-card">
+          <!-- HOME IMPROVEMENTS -->
 
-            <div
-              class="service-icon"
-              aria-hidden="true"
-            >
-              🏠
+          <article class="service-card service-card-photo">
+
+            <div class="service-card-image">
+
+              <img
+                src="Home-Improvements.jpg"
+                alt="Home improvement work representing Pioneer Works home improvement services"
+                loading="lazy"
+              >
+
             </div>
 
-            <h3>
-              Home Improvements
-            </h3>
+            <div class="service-card-content">
 
-            <p>
-              Practical improvement work designed to
-              refresh and enhance different areas of
-              your home.
-            </p>
+              <h3>
+                Home Improvements
+              </h3>
 
-            <a href="services.html#improvements">
-              Explore Home Improvements →
-            </a>
+              <p>
+                Practical improvement work designed to refresh and enhance
+                different areas of your home.
+              </p>
+
+              <a href="services.html#home-improvements">
+                Explore Home Improvements &rarr;
+              </a>
+
+            </div>
 
           </article>
 
 
-          <!-- Handyman -->
 
-          <article class="service-card">
+          <!-- HANDYMAN -->
 
-            <div
-              class="service-icon"
-              aria-hidden="true"
-            >
-              🛠️
+          <article class="service-card service-card-photo">
+
+            <div class="service-card-image">
+
+              <img
+                src="Handyman-Services.jpg"
+                alt="Handyman tools representing Pioneer Works handyman services"
+                loading="lazy"
+              >
+
             </div>
 
-            <h3>
-              Handyman Services
-            </h3>
+            <div class="service-card-content">
 
-            <p>
-              General repairs, fixes and smaller property
-              jobs that still deserve proper attention
-              and care.
-            </p>
+              <h3>
+                Handyman Services
+              </h3>
 
-            <a href="services.html#handyman">
-              Explore Handyman Services →
-            </a>
+              <p>
+                General repairs, fixes and smaller property jobs that still
+                deserve proper attention and care.
+              </p>
+
+              <a href="services.html#handyman-services">
+                Explore Handyman Services &rarr;
+              </a>
+
+            </div>
 
           </article>
 
@@ -453,17 +418,9 @@
         </div>
 
 
-        <div
-          style="
-            text-align:center;
-            margin-top:38px;
-          "
-        >
+        <div style="text-align:center; margin-top:40px;">
 
-          <a
-            href="services.html"
-            class="btn-primary"
-          >
+          <a href="services.html" class="btn-primary">
             View All Services
           </a>
 
@@ -474,9 +431,10 @@
     </section>
 
 
-    <!-- ===================================================
+
+    <!-- ======================================================
          OUR PROMISE
-         =================================================== -->
+    ======================================================= -->
 
     <section class="promise">
 
@@ -486,17 +444,29 @@
 
 
           <div
-            class="promise-photo"
+            class="promise-image"
+            style="
+              background:
+                linear-gradient(
+                  rgba(0,43,99,0.12),
+                  rgba(0,43,99,0.12)
+                ),
+                url('hero-home.jpeg') center/cover no-repeat;
+            "
             role="img"
-            aria-label="Property improvement and outdoor construction"
-          ></div>
+            aria-label="Modern home and timber deck"
+          >
+          </div>
 
 
           <div class="promise-content">
 
-            <p class="section-label">
-              Our Approach
-            </p>
+            <div
+              class="section-label"
+              style="text-align:left;"
+            >
+              Our Promise
+            </div>
 
             <h2>
               Built on Trust.<br>
@@ -504,10 +474,8 @@
             </h2>
 
             <p>
-              We believe good property work starts with
-              clear communication, practical solutions and
-              respect for the people and properties we work
-              with.
+              We believe good property work starts with clear communication,
+              practical solutions and respect for the customer's property.
             </p>
 
 
@@ -516,13 +484,12 @@
               <div class="value-card">
 
                 <strong>
-                  Clear Communication
+                  Reliable
                 </strong>
 
-                <br>
-
-                Straightforward communication from your
-                initial enquiry through to the work itself.
+                <p>
+                  We value dependable service and clear communication.
+                </p>
 
               </div>
 
@@ -530,13 +497,12 @@
               <div class="value-card">
 
                 <strong>
-                  Practical Solutions
+                  Practical
                 </strong>
 
-                <br>
-
-                An approach focused on what your property
-                actually needs.
+                <p>
+                  Straightforward solutions suited to the work required.
+                </p>
 
               </div>
 
@@ -544,13 +510,12 @@
               <div class="value-card">
 
                 <strong>
-                  Respect for Your Property
+                  Respectful
                 </strong>
 
-                <br>
-
-                Your home and property are treated with
-                care throughout the job.
+                <p>
+                  Your home and property are treated with care.
+                </p>
 
               </div>
 
@@ -558,13 +523,12 @@
               <div class="value-card">
 
                 <strong>
-                  Quality-Focused Work
+                  Quality Focused
                 </strong>
 
-                <br>
-
-                Attention to the details that contribute
-                to a professional result.
+                <p>
+                  Attention to detail matters from start to finish.
+                </p>
 
               </div>
 
@@ -579,26 +543,26 @@
     </section>
 
 
-    <!-- ===================================================
+
+    <!-- ======================================================
          WHY CHOOSE PIONEER WORKS
-         =================================================== -->
+    ======================================================= -->
 
     <section class="why-band">
 
       <div class="container">
 
-        <p class="section-label">
-          Pioneer Works
-        </p>
+        <div class="section-label">
+          Why Pioneer Works
+        </div>
 
         <h2 class="section-title">
-          A Straightforward Approach to Property Work
+          Straightforward Property Services
         </h2>
 
         <p class="section-subtitle">
-          From the first conversation to the completion
-          of the work, our focus is on keeping the process
-          clear, practical and professional.
+          Whether you need a single repair or have a larger property
+          improvement project in mind, talk to us about the work you need done.
         </p>
 
 
@@ -611,8 +575,8 @@
             </h3>
 
             <p>
-              We aim to keep communication simple and
-              straightforward throughout your project.
+              We aim to keep communication simple and straightforward from
+              enquiry through to completion.
             </p>
 
           </div>
@@ -621,12 +585,26 @@
           <div class="why-card">
 
             <h3>
-              Range of Services
+              Multiple Services
             </h3>
 
             <p>
-              Painting, fencing, decks, maintenance,
-              improvements and handyman work in one place.
+              Painting, fencing, decks, maintenance, improvements and
+              handyman work in one place.
+            </p>
+
+          </div>
+
+
+          <div class="why-card">
+
+            <h3>
+              Practical Approach
+            </h3>
+
+            <p>
+              We focus on understanding the job and providing practical
+              solutions for your property.
             </p>
 
           </div>
@@ -639,23 +617,7 @@
             </h3>
 
             <p>
-              Serving customers across Auckland,
-              Waikato and the Bay of Plenty.
-            </p>
-
-          </div>
-
-
-          <div class="why-card">
-
-            <h3>
-              Easy Quote Requests
-            </h3>
-
-            <p>
-              Tell us about the work you need and
-              request a quote directly through our
-              website.
+              Serving customers across Auckland, Waikato and Bay of Plenty.
             </p>
 
           </div>
@@ -667,9 +629,10 @@
     </section>
 
 
-    <!-- ===================================================
+
+    <!-- ======================================================
          SERVICE AREAS
-         =================================================== -->
+    ======================================================= -->
 
     <section class="areas-section">
 
@@ -680,18 +643,20 @@
 
           <div>
 
-            <p class="section-label">
+            <div
+              class="section-label"
+              style="text-align:left;"
+            >
               Where We Work
-            </p>
+            </div>
 
             <h2>
               Serving the Upper North Island
             </h2>
 
             <p>
-              Pioneer Works provides property services
-              across Auckland, Waikato and the
-              Bay of Plenty.
+              Contact Pioneer Works to discuss your property project and
+              confirm availability in your area.
             </p>
 
           </div>
@@ -721,18 +686,15 @@
             </h3>
 
             <p>
-              Send us the details and we can discuss
-              what you need.
+              Tell us what you need and request a free quote.
             </p>
 
-            <a
-              href="quote.html"
-              class="btn-primary"
-            >
-              Request a Free Quote
+            <a href="quote.html" class="btn-primary">
+              Request a Quote
             </a>
 
           </div>
+
 
         </div>
 
@@ -741,122 +703,34 @@
     </section>
 
 
-    <!-- ===================================================
-         OUR WORK / TESTIMONIALS
-         =================================================== -->
+
+    <!-- ======================================================
+         OUR WORK
+    ======================================================= -->
 
     <section class="testimonials">
 
       <div class="container">
 
-        <p class="section-label">
+        <div class="section-label">
           Our Work
-        </p>
+        </div>
 
         <h2 class="section-title">
           Our Work &amp; Customer Feedback
         </h2>
 
         <p class="section-subtitle">
-          We are building our online project gallery and
-          testimonial collection. As completed project
-          photos and genuine customer feedback become
-          available, they will be added here.
+          Our project gallery and genuine customer feedback will be added as
+          Pioneer Works continues to document completed work.
         </p>
 
 
-        <div class="testimonial-grid">
+        <div style="text-align:center;">
 
-
-          <div class="testimonial">
-
-            <h3
-              style="
-                color:var(--deep-blue);
-                margin-bottom:12px;
-              "
-            >
-              Project Gallery
-            </h3>
-
-            <p>
-              Visit our dedicated page for Pioneer Works
-              project updates and completed work as the
-              portfolio grows.
-            </p>
-
-            <a
-              href="gallery.html"
-              style="
-                color:var(--blue);
-                font-weight:900;
-              "
-            >
-              View Our Work →
-            </a>
-
-          </div>
-
-
-          <div class="testimonial">
-
-            <h3
-              style="
-                color:var(--deep-blue);
-                margin-bottom:12px;
-              "
-            >
-              Customer Testimonials
-            </h3>
-
-            <p>
-              Genuine customer feedback will be published
-              as it becomes available. We do not use
-              placeholder reviews as customer testimonials.
-            </p>
-
-            <a
-              href="gallery.html#testimonials"
-              style="
-                color:var(--blue);
-                font-weight:900;
-              "
-            >
-              View Testimonials →
-            </a>
-
-          </div>
-
-
-          <div class="testimonial">
-
-            <h3
-              style="
-                color:var(--deep-blue);
-                margin-bottom:12px;
-              "
-            >
-              Planning a Project?
-            </h3>
-
-            <p>
-              Tell us what you would like repaired,
-              maintained, painted or improved and send
-              us the details through our quote form.
-            </p>
-
-            <a
-              href="quote.html"
-              style="
-                color:var(--blue);
-                font-weight:900;
-              "
-            >
-              Request a Quote →
-            </a>
-
-          </div>
-
+          <a href="gallery.html" class="btn-primary">
+            View Our Work &amp; Testimonials
+          </a>
 
         </div>
 
@@ -865,39 +739,35 @@
     </section>
 
 
-    <!-- ===================================================
+
+    <!-- ======================================================
          FINAL CTA
-         =================================================== -->
+    ======================================================= -->
 
     <section class="cta">
 
       <div class="container">
 
         <h2>
-          Ready to Discuss Your Project?
+          Need Work Done Around Your Property?
         </h2>
 
         <p>
-          Whether it is painting, fencing, a deck,
-          maintenance, home improvements or general
-          repairs, tell us what you need and we can
-          discuss the next step.
+          Tell us about your project and we can discuss the work involved,
+          your location and the next steps.
         </p>
 
 
-        <div class="hero-buttons">
+        <div
+          class="hero-buttons"
+          style="justify-content:center;"
+        >
 
-          <a
-            href="quote.html"
-            class="btn-primary"
-          >
-            Request a Free Quote
+          <a href="quote.html" class="btn-primary">
+            Get a Free Quote
           </a>
 
-          <a
-            href="tel:0212839995"
-            class="btn-secondary"
-          >
+          <a href="tel:+64212839995" class="btn-secondary">
             Call 021 283 9995
           </a>
 
@@ -911,16 +781,15 @@
   </main>
 
 
-  <!-- =====================================================
+
+  <!-- ======================================================
        FOOTER
-       ===================================================== -->
+  ======================================================= -->
 
   <footer>
 
     <div class="footer-grid">
 
-
-      <!-- Company -->
 
       <div>
 
@@ -931,14 +800,45 @@
         >
 
         <p>
-          Practical property services across Auckland,
-          Waikato and the Bay of Plenty.
+          Painting, fencing, decks, property maintenance,
+          home improvements and handyman services.
         </p>
 
       </div>
 
 
-      <!-- Links -->
+      <div>
+
+        <h3>
+          Services
+        </h3>
+
+        <a href="services.html#painting">
+          Painting
+        </a>
+
+        <a href="services.html#fencing">
+          Fencing
+        </a>
+
+        <a href="services.html#decks">
+          Decks
+        </a>
+
+        <a href="services.html#property-maintenance">
+          Property Maintenance
+        </a>
+
+        <a href="services.html#home-improvements">
+          Home Improvements
+        </a>
+
+        <a href="services.html#handyman-services">
+          Handyman Services
+        </a>
+
+      </div>
+
 
       <div>
 
@@ -973,50 +873,13 @@
       </div>
 
 
-      <!-- Services -->
-
-      <div>
-
-        <h3>
-          Services
-        </h3>
-
-        <a href="services.html#painting">
-          Painting
-        </a>
-
-        <a href="services.html#fencing">
-          Fencing
-        </a>
-
-        <a href="services.html#decks">
-          Decks
-        </a>
-
-        <a href="services.html#maintenance">
-          Property Maintenance
-        </a>
-
-        <a href="services.html#improvements">
-          Home Improvements
-        </a>
-
-        <a href="services.html#handyman">
-          Handyman Services
-        </a>
-
-      </div>
-
-
-      <!-- Contact -->
-
       <div>
 
         <h3>
           Contact
         </h3>
 
-        <a href="tel:0212839995">
+        <a href="tel:+64212839995">
           021 283 9995
         </a>
 
@@ -1029,7 +892,7 @@
         </a>
 
         <p>
-          Auckland • Waikato • Bay of Plenty
+          Auckland &bull; Waikato &bull; Bay of Plenty
         </p>
 
       </div>
@@ -1040,24 +903,22 @@
 
     <div class="copyright">
 
-      © <span class="current-year">2026</span>
-      Pioneer Works Limited.
+      &copy; 2026 Pioneer Works Limited.
       All rights reserved.
 
-      &nbsp; • &nbsp;
+      <br>
 
-      <a href="privacy.html">
-        Privacy Policy
+      <a
+        href="privacy.html"
+        style="display:inline-block; margin-top:6px;"
+      >
+        Privacy Policy &bull; Terms of Use &bull; Website Disclaimer
       </a>
 
     </div>
 
   </footer>
 
-
-  <!-- =====================================================
-       JAVASCRIPT
-       ===================================================== -->
 
   <script src="script.js"></script>
 
