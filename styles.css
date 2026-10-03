@@ -1,120 +1,1736 @@
 /* =========================================================
-   SERVICE CARDS WITH PHOTOGRAPHY
+   PIONEER WORKS LIMITED
+   MASTER STYLESHEET
    ========================================================= */
 
-.service-card-photo{
+
+/* =========================================================
+   1. COLOURS & GLOBAL VARIABLES
+   ========================================================= */
+
+:root{
+  --blue:#003f8f;
+  --deep-blue:#002b63;
+  --navy:#001f4d;
+  --navy-dark:#001735;
+
+  --gold:#cf9826;
+  --gold-dark:#b98216;
+
+  --white:#ffffff;
+  --light:#f7f9fc;
+  --soft:#eef4fb;
+
+  --text:#202938;
+  --muted:#5f6d82;
+
+  --border:#e0e7f0;
+
+  --shadow-sm:0 5px 18px rgba(0,31,77,0.07);
+  --shadow:0 12px 32px rgba(0,31,77,0.10);
+  --shadow-hover:0 18px 38px rgba(0,31,77,0.15);
+
+  --radius:14px;
+}
+
+
+/* =========================================================
+   2. RESET
+   ========================================================= */
+
+*{
+  box-sizing:border-box;
+  margin:0;
   padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+
+  color:var(--text);
+  background:var(--white);
+
+  line-height:1.65;
+
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button,
+input,
+textarea,
+select{
+  font:inherit;
+}
+
+main{
+  display:block;
+}
+
+
+/* =========================================================
+   3. ACCESSIBILITY
+   ========================================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible{
+  outline:3px solid rgba(207,152,38,0.45);
+  outline-offset:3px;
+}
+
+
+/* =========================================================
+   4. GENERAL CONTAINERS
+   ========================================================= */
+
+.container{
+  width:100%;
+  max-width:1200px;
+  margin:0 auto;
+}
+
+section{
+  padding:84px 24px;
+}
+
+
+/* =========================================================
+   5. TOP BAR
+   ========================================================= */
+
+.top-bar{
+  background:var(--deep-blue);
+  color:var(--white);
+  padding:9px 24px;
+
+  font-size:13px;
+  font-weight:600;
+}
+
+.top-bar-inner{
+  width:100%;
+  max-width:1200px;
+
+  margin:0 auto;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  gap:20px;
+}
+
+.top-bar a{
+  color:var(--white);
+  transition:color 0.2s ease;
+}
+
+.top-bar a:hover{
+  color:#f1c766;
+}
+
+
+/* =========================================================
+   6. HEADER
+   ========================================================= */
+
+header{
+  position:sticky;
+  top:0;
+
+  z-index:1000;
+
+  background:rgba(255,255,255,0.98);
+
+  border-bottom:1px solid var(--border);
+
+  box-shadow:0 2px 12px rgba(0,31,77,0.04);
+}
+
+.nav-wrap{
+  width:100%;
+  max-width:1200px;
+
+  margin:0 auto;
+  padding:14px 24px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  gap:30px;
+}
+
+.logo{
+  flex:none;
+}
+
+.logo img{
+  width:auto;
+  height:74px;
+  object-fit:contain;
+}
+
+nav{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+
+  gap:25px;
+}
+
+nav a{
+  position:relative;
+
+  color:#171d27;
+
+  font-size:14px;
+  font-weight:700;
+
+  white-space:nowrap;
+
+  transition:color 0.2s ease;
+}
+
+nav a:not(.quote-btn)::after{
+  content:"";
+
+  position:absolute;
+  left:0;
+  bottom:-8px;
+
+  width:0;
+  height:2px;
+
+  background:var(--gold);
+
+  transition:width 0.25s ease;
+}
+
+nav a:not(.quote-btn):hover,
+nav a.active{
+  color:var(--deep-blue);
+}
+
+nav a:not(.quote-btn):hover::after,
+nav a.active::after{
+  width:100%;
+}
+
+.quote-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:13px 20px;
+
+  border-radius:7px;
+
+  background:var(--gold);
+  color:var(--white) !important;
+
+  box-shadow:0 8px 18px rgba(207,152,38,0.22);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.quote-btn:hover{
+  background:var(--gold-dark);
+
+  transform:translateY(-2px);
+
+  box-shadow:0 10px 24px rgba(207,152,38,0.30);
+}
+
+
+/* =========================================================
+   7. HERO
+   ========================================================= */
+
+.hero{
+  position:relative;
+
+  min-height:620px;
+
+  display:flex;
+  align-items:center;
+
+  padding:90px 24px;
+
+  color:var(--white);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,31,77,0.96) 0%,
+      rgba(0,43,99,0.88) 42%,
+      rgba(0,43,99,0.35) 100%
+    ),
+    url("hero-home.jpeg");
+
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+}
+
+.hero-inner{
+  width:100%;
+  max-width:1200px;
+
+  margin:0 auto;
+}
+
+.company-name{
+  margin-bottom:16px;
+
+  color:#efc15b;
+
+  font-size:18px;
+  font-weight:800;
+
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.hero h1{
+  max-width:680px;
+
+  margin:0 0 20px;
+
+  color:var(--white);
+
+  font-size:clamp(46px,6vw,72px);
+  font-weight:900;
+
+  line-height:1.02;
+  letter-spacing:-1.5px;
+}
+
+.gold-line{
+  width:120px;
+  height:4px;
+
+  margin:22px 0;
+
+  background:var(--gold);
+
+  border-radius:20px;
+}
+
+.hero p{
+  max-width:660px;
+
+  margin:0 0 30px;
+
+  color:#f1f5fb;
+
+  font-size:19px;
+  line-height:1.7;
+}
+
+.hero-buttons{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+
+  gap:14px;
+
+  margin-top:25px;
+}
+
+.btn-primary,
+.btn-secondary{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  min-height:52px;
+
+  padding:14px 24px;
+
+  border-radius:7px;
+
+  font-size:15px;
+  font-weight:800;
+
+  line-height:1.2;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn-primary{
+  background:var(--gold);
+  color:var(--white);
+
+  border:2px solid var(--gold);
+
+  box-shadow:0 8px 20px rgba(207,152,38,0.20);
+}
+
+.btn-primary:hover{
+  background:var(--gold-dark);
+  border-color:var(--gold-dark);
+
+  transform:translateY(-2px);
+
+  box-shadow:0 11px 24px rgba(207,152,38,0.28);
+}
+
+.btn-secondary{
+  background:transparent;
+  color:var(--white);
+
+  border:2px solid rgba(255,255,255,0.9);
+}
+
+.btn-secondary:hover{
+  background:var(--white);
+  color:var(--deep-blue);
+
+  transform:translateY(-2px);
+}
+
+.hero-features{
+  display:flex;
+  flex-wrap:wrap;
+
+  gap:10px 26px;
+
+  margin-top:42px;
+}
+
+.hero-feature{
+  position:relative;
+
+  padding-left:18px;
+
+  color:#f5f8fc;
+
+  font-size:14px;
+  font-weight:700;
+}
+
+.hero-feature::before{
+  content:"";
+
+  position:absolute;
+  left:0;
+  top:50%;
+
+  width:7px;
+  height:7px;
+
+  background:var(--gold);
+
+  border-radius:50%;
+
+  transform:translateY(-50%);
+}
+
+
+/* =========================================================
+   8. SECTION HEADINGS
+   ========================================================= */
+
+.section-label{
+  margin-bottom:8px;
+
+  color:var(--gold-dark);
+
+  text-align:center;
+
+  font-size:13px;
+  font-weight:800;
+
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.section-title{
+  max-width:850px;
+
+  margin:0 auto 14px;
+
+  color:var(--deep-blue);
+
+  text-align:center;
+
+  font-size:clamp(31px,4vw,42px);
+  font-weight:850;
+
+  line-height:1.16;
+  letter-spacing:-0.5px;
+}
+
+.section-subtitle{
+  max-width:790px;
+
+  margin:0 auto 44px;
+
+  color:var(--muted);
+
+  text-align:center;
+
+  font-size:17px;
+  line-height:1.75;
+}
+
+
+/* =========================================================
+   9. HOMEPAGE SERVICES
+   ========================================================= */
+
+.services-section{
+  background:var(--white);
+}
+
+.services-section .services-grid{
+  display:grid;
+
+  grid-template-columns:repeat(3,minmax(0,1fr));
+
+  gap:26px;
+
+  align-items:stretch;
+}
+
+
+/* =========================================================
+   10. HOMEPAGE SERVICE CARDS
+   ========================================================= */
+
+.service-card{
+  background:var(--white);
+
+  border:1px solid var(--border);
+
+  border-radius:var(--radius);
+
+  box-shadow:var(--shadow-sm);
+
   overflow:hidden;
-  text-align:left;
+}
+
+.services-section .service-card-photo{
+  padding:0;
+
   display:flex;
   flex-direction:column;
+
+  min-width:0;
   height:100%;
+
+  text-align:left;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 
-.service-card-image{
+.services-section .service-card-photo:hover{
+  transform:translateY(-5px);
+
+  border-color:#d2ddea;
+
+  box-shadow:var(--shadow-hover);
+}
+
+
+/* PHOTO */
+
+.services-section .service-card-image{
+  position:relative;
+
   width:100%;
-  height:220px;
+  height:215px;
+
+  flex:0 0 215px;
+
   overflow:hidden;
-  background:#eef2f7;
+
+  background:#e9eef5;
 }
 
-.service-card-image img{
+.services-section .service-card-image img{
+  position:absolute;
+
+  inset:0;
+
   width:100%;
   height:100%;
+
+  max-width:none;
+
   object-fit:cover;
   object-position:center;
-  display:block;
+
   transition:transform 0.4s ease;
 }
 
-.service-card-photo:hover .service-card-image img{
-  transform:scale(1.04);
+.services-section .service-card-photo:hover
+.service-card-image img{
+  transform:scale(1.035);
 }
 
-.service-card-content{
-  padding:26px 26px 28px;
+
+/* Individual crop adjustments */
+
+.services-section
+.service-card:nth-child(1)
+.service-card-image img{
+  object-position:center 57%;
+}
+
+.services-section
+.service-card:nth-child(2)
+.service-card-image img{
+  object-position:center 50%;
+}
+
+.services-section
+.service-card:nth-child(3)
+.service-card-image img{
+  object-position:center 55%;
+}
+
+.services-section
+.service-card:nth-child(4)
+.service-card-image img{
+  object-position:center;
+}
+
+.services-section
+.service-card:nth-child(5)
+.service-card-image img{
+  object-position:center;
+}
+
+.services-section
+.service-card:nth-child(6)
+.service-card-image img{
+  object-position:center;
+}
+
+
+/* CONTENT */
+
+.services-section .service-card-content{
+  padding:24px 25px 26px;
+
   display:flex;
   flex-direction:column;
+
   flex:1;
 }
 
-.service-card-content h3{
+.services-section .service-card-content h3{
+  margin:0 0 9px;
+
   color:var(--deep-blue);
-  font-size:22px;
-  margin-bottom:10px;
-}
 
-.service-card-content p{
-  color:var(--muted);
-  font-size:15px;
-  line-height:1.7;
-  margin-bottom:22px;
-}
-
-.service-card-content a{
-  color:var(--blue);
+  font-size:21px;
   font-weight:800;
+
+  line-height:1.3;
+}
+
+.services-section .service-card-content p{
+  margin:0 0 19px;
+
+  color:var(--muted);
+
+  font-size:14.5px;
+  line-height:1.7;
+}
+
+.services-section .service-card-content a{
   margin-top:auto;
+
+  color:var(--blue);
+
+  font-size:14px;
+  font-weight:800;
+
+  transition:color 0.2s ease;
 }
 
-.service-card-content a:hover{
+.services-section .service-card-content a:hover{
+  color:var(--gold-dark);
+}
+
+
+/* Old emoji service icons are no longer required */
+
+.service-icon{
+  display:none;
+}
+
+
+/* =========================================================
+   11. PROMISE SECTION
+   ========================================================= */
+
+.promise{
+  background:var(--light);
+}
+
+.promise-wrap{
+  display:grid;
+
+  grid-template-columns:minmax(0,0.9fr) minmax(0,1.35fr);
+
+  gap:38px;
+
+  align-items:stretch;
+}
+
+.promise-image{
+  position:relative;
+
+  min-height:420px;
+
+  overflow:hidden;
+
+  border-radius:16px;
+
+  background:
+    linear-gradient(
+      rgba(0,43,99,0.10),
+      rgba(0,43,99,0.10)
+    ),
+    url("hero-home.jpeg") center/cover no-repeat;
+
+  box-shadow:var(--shadow);
+}
+
+.promise-content{
+  padding:42px;
+
+  background:var(--white);
+
+  border:1px solid var(--border);
+  border-radius:16px;
+
+  box-shadow:var(--shadow);
+}
+
+.promise-content .section-label{
+  text-align:left;
+}
+
+.promise-content h2{
+  margin-bottom:15px;
+
+  color:var(--deep-blue);
+
+  font-size:clamp(30px,4vw,39px);
+  line-height:1.2;
+}
+
+.promise-content > p{
+  color:var(--muted);
+
+  font-size:16px;
+  line-height:1.75;
+}
+
+.values-grid{
+  display:grid;
+
+  grid-template-columns:repeat(2,minmax(0,1fr));
+
+  gap:16px;
+
+  margin-top:26px;
+}
+
+.value-card{
+  padding:20px;
+
+  background:var(--soft);
+
+  border:1px solid #e2eaf5;
+  border-radius:10px;
+}
+
+.value-card strong{
+  display:block;
+
+  margin-bottom:6px;
+
+  color:var(--deep-blue);
+
+  font-size:16px;
+}
+
+.value-card p{
+  color:var(--muted);
+
+  font-size:14px;
+  line-height:1.6;
+}
+
+
+/* =========================================================
+   12. WHY CHOOSE US
+   ========================================================= */
+
+.why-band{
+  background:
+    linear-gradient(
+      120deg,
+      var(--navy),
+      var(--deep-blue)
+    );
+
+  color:var(--white);
+}
+
+.why-band .section-label{
+  color:#efc15b;
+}
+
+.why-band .section-title{
+  color:var(--white);
+}
+
+.why-band .section-subtitle{
+  color:#dce6f4;
+}
+
+.why-grid{
+  display:grid;
+
+  grid-template-columns:repeat(4,minmax(0,1fr));
+
+  gap:0;
+
+  margin-top:10px;
+}
+
+.why-card{
+  position:relative;
+
+  padding:26px 28px;
+
+  text-align:center;
+}
+
+.why-card:not(:last-child){
+  border-right:1px solid rgba(255,255,255,0.18);
+}
+
+.why-card h3{
+  margin-bottom:9px;
+
+  color:var(--white);
+
+  font-size:18px;
+}
+
+.why-card p{
+  color:#dce6f4;
+
+  font-size:14px;
+  line-height:1.7;
+}
+
+
+/* =========================================================
+   13. SERVICE AREAS
+   ========================================================= */
+
+.areas-section{
+  background:var(--white);
+}
+
+.areas-box{
+  display:grid;
+
+  grid-template-columns:1.3fr 0.75fr 1fr;
+
+  gap:32px;
+
+  align-items:center;
+
+  padding:38px;
+
+  background:var(--white);
+
+  border:1px solid var(--border);
+  border-radius:16px;
+
+  box-shadow:var(--shadow);
+}
+
+.areas-box .section-label{
+  text-align:left;
+}
+
+.areas-box h2{
+  margin-bottom:10px;
+
+  color:var(--deep-blue);
+
+  font-size:30px;
+  line-height:1.25;
+}
+
+.areas-box p{
+  color:var(--muted);
+}
+
+.areas-list{
+  display:grid;
+  gap:13px;
+}
+
+.areas-list span{
+  position:relative;
+
+  padding-left:19px;
+
+  color:var(--deep-blue);
+
+  font-size:16px;
+  font-weight:800;
+}
+
+.areas-list span::before{
+  content:"";
+
+  position:absolute;
+  left:0;
+  top:9px;
+
+  width:7px;
+  height:7px;
+
+  background:var(--gold);
+
+  border-radius:50%;
+}
+
+.quote-panel{
+  padding:28px;
+
+  text-align:center;
+
+  background:#fffaf0;
+
+  border:1px solid rgba(207,152,38,0.55);
+  border-radius:12px;
+}
+
+.quote-panel h3{
+  margin-bottom:8px;
+
+  color:var(--deep-blue);
+
+  font-size:20px;
+}
+
+.quote-panel p{
+  margin-bottom:18px;
+
+  font-size:14px;
+}
+
+
+/* =========================================================
+   14. OUR WORK / TESTIMONIALS
+   ========================================================= */
+
+.testimonials{
+  background:var(--light);
+}
+
+.testimonial-grid{
+  display:grid;
+
+  grid-template-columns:repeat(3,minmax(0,1fr));
+
+  gap:24px;
+}
+
+.testimonial{
+  padding:30px;
+
+  background:var(--white);
+
+  border:1px solid var(--border);
+  border-radius:14px;
+
+  box-shadow:var(--shadow-sm);
+}
+
+.stars{
+  margin-bottom:10px;
+
   color:var(--gold);
+
+  font-size:19px;
 }
 
 
-/* Keep the six cards as a professional 3 x 2 layout
-   on larger screens */
+/* =========================================================
+   15. FINAL CTA
+   ========================================================= */
 
-@media(min-width:901px){
+.cta{
+  background:
+    linear-gradient(
+      120deg,
+      var(--deep-blue),
+      var(--blue)
+    );
 
-  .services-section .services-grid{
-    grid-template-columns:repeat(3,1fr);
-    gap:24px;
+  color:var(--white);
+
+  text-align:center;
+}
+
+.cta h2{
+  margin-bottom:14px;
+
+  color:var(--white);
+
+  font-size:clamp(31px,4vw,42px);
+  line-height:1.2;
+}
+
+.cta p{
+  max-width:750px;
+
+  margin:0 auto 28px;
+
+  color:#e8eff9;
+
+  font-size:17px;
+  line-height:1.75;
+}
+
+
+/* =========================================================
+   16. FOOTER
+   ========================================================= */
+
+footer{
+  padding:58px 24px 22px;
+
+  background:var(--navy-dark);
+
+  color:var(--white);
+}
+
+.footer-grid{
+  width:100%;
+  max-width:1200px;
+
+  margin:0 auto;
+
+  display:grid;
+
+  grid-template-columns:1.5fr 1fr 1fr 1.15fr;
+
+  gap:38px;
+}
+
+.footer-logo{
+  width:auto;
+  height:72px;
+
+  margin-bottom:16px;
+
+  object-fit:contain;
+}
+
+footer h3{
+  margin-bottom:14px;
+
+  color:#efc15b;
+
+  font-size:16px;
+}
+
+footer p,
+footer a{
+  display:block;
+
+  margin-bottom:8px;
+
+  color:#dce5f1;
+
+  font-size:14px;
+  line-height:1.6;
+}
+
+footer a{
+  transition:color 0.2s ease;
+}
+
+footer a:hover{
+  color:#efc15b;
+}
+
+.copyright{
+  width:100%;
+  max-width:1200px;
+
+  margin:38px auto 0;
+  padding-top:20px;
+
+  border-top:1px solid rgba(255,255,255,0.14);
+
+  color:#aebdd0;
+
+  text-align:center;
+
+  font-size:12.5px;
+}
+
+
+/* =========================================================
+   17. GENERAL FORM STYLES
+   Used by quote/contact pages
+   ========================================================= */
+
+form{
+  width:100%;
+}
+
+label{
+  display:block;
+
+  margin-bottom:7px;
+
+  color:var(--deep-blue);
+
+  font-size:14px;
+  font-weight:700;
+}
+
+input,
+select,
+textarea{
+  width:100%;
+
+  padding:13px 14px;
+
+  color:var(--text);
+  background:var(--white);
+
+  border:1px solid #ccd6e3;
+  border-radius:7px;
+
+  font-size:16px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+textarea{
+  min-height:150px;
+
+  resize:vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+  border-color:var(--blue);
+
+  outline:none;
+
+  box-shadow:0 0 0 3px rgba(0,63,143,0.10);
+}
+
+
+/* =========================================================
+   18. COMMON PAGE HERO SUPPORT
+   For Services, Quote, Contact, Privacy, Gallery
+   ========================================================= */
+
+.page-hero{
+  position:relative;
+
+  padding:90px 24px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,31,77,0.96),
+      rgba(0,43,99,0.78)
+    ),
+    url("hero-home.jpeg") center/cover no-repeat;
+
+  color:var(--white);
+
+  text-align:center;
+}
+
+.page-hero .container{
+  max-width:900px;
+}
+
+.page-hero h1{
+  margin-bottom:16px;
+
+  color:var(--white);
+
+  font-size:clamp(38px,5vw,58px);
+  line-height:1.1;
+}
+
+.page-hero p{
+  max-width:760px;
+
+  margin:0 auto;
+
+  color:#edf3fb;
+
+  font-size:18px;
+  line-height:1.7;
+}
+
+
+/* =========================================================
+   19. SERVICES PAGE SUPPORT
+   ========================================================= */
+
+.service-detail{
+  overflow:hidden;
+
+  background:var(--white);
+
+  border:1px solid var(--border);
+  border-radius:16px;
+
+  box-shadow:var(--shadow);
+}
+
+.service-detail + .service-detail{
+  margin-top:42px;
+}
+
+.service-detail-grid{
+  display:grid;
+
+  grid-template-columns:minmax(330px,0.85fr) minmax(0,1.45fr);
+
+  align-items:stretch;
+}
+
+.service-detail-image{
+  position:relative;
+
+  min-height:500px;
+
+  overflow:hidden;
+
+  background:var(--deep-blue);
+}
+
+.service-detail-image img{
+  position:absolute;
+
+  inset:0;
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+  object-position:center;
+}
+
+.service-detail-content{
+  padding:44px 48px;
+}
+
+.service-detail-content h2{
+  margin-bottom:15px;
+
+  color:var(--deep-blue);
+
+  font-size:34px;
+  line-height:1.2;
+}
+
+.service-detail-content h3{
+  margin:24px 0 14px;
+
+  color:var(--deep-blue);
+
+  font-size:20px;
+}
+
+.service-detail-content p{
+  color:var(--muted);
+
+  line-height:1.75;
+}
+
+
+/* =========================================================
+   20. TABLET
+   ========================================================= */
+
+@media(max-width:1000px){
+
+  nav{
+    gap:17px;
   }
 
-}
+  nav a{
+    font-size:13px;
+  }
 
+  .logo img{
+    height:66px;
+  }
 
-/* Tablet */
-
-@media(max-width:900px) and (min-width:601px){
-
-  .services-section .services-grid{
+  .why-grid{
     grid-template-columns:repeat(2,1fr);
   }
 
-  .service-card-image{
-    height:210px;
+  .why-card{
+    border-right:none !important;
+  }
+
+  .why-card:nth-child(odd){
+    border-right:1px solid rgba(255,255,255,0.18) !important;
+  }
+
+  .why-card:nth-child(-n+2){
+    border-bottom:1px solid rgba(255,255,255,0.18);
   }
 
 }
 
 
-/* Mobile */
+/* =========================================================
+   21. MOBILE / SMALL TABLET
+   ========================================================= */
 
-@media(max-width:600px){
+@media(max-width:900px){
+
+  section{
+    padding:68px 20px;
+  }
+
+
+  /* TOP BAR */
+
+  .top-bar-inner{
+    justify-content:center;
+
+    text-align:center;
+
+    flex-wrap:wrap;
+
+    gap:4px 15px;
+  }
+
+
+  /* HEADER */
+
+  header{
+    position:relative;
+  }
+
+  .nav-wrap{
+    flex-direction:column;
+
+    padding:14px 20px 18px;
+
+    gap:12px;
+  }
+
+  .logo img{
+    height:68px;
+  }
+
+  nav{
+    justify-content:center;
+    flex-wrap:wrap;
+
+    gap:12px 18px;
+  }
+
+  nav a:not(.quote-btn)::after{
+    bottom:-4px;
+  }
+
+
+  /* HERO */
+
+  .hero{
+    min-height:auto;
+
+    padding:80px 20px;
+
+    text-align:center;
+
+    background:
+      linear-gradient(
+        rgba(0,31,77,0.88),
+        rgba(0,43,99,0.88)
+      ),
+      url("hero-home.jpeg") center/cover no-repeat;
+  }
+
+  .hero h1{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .hero p{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .gold-line{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .hero-buttons{
+    justify-content:center;
+  }
+
+  .hero-features{
+    justify-content:center;
+  }
+
+
+  /* HOMEPAGE SERVICES */
 
   .services-section .services-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+
+    gap:22px;
+  }
+
+  .services-section .service-card-image{
+    height:220px;
+    flex-basis:220px;
+  }
+
+
+  /* PROMISE */
+
+  .promise-wrap{
     grid-template-columns:1fr;
   }
 
-  .service-card-image{
-    height:230px;
+  .promise-image{
+    min-height:360px;
   }
 
-  .service-card-content{
-    padding:23px 22px 26px;
+
+  /* AREAS */
+
+  .areas-box{
+    grid-template-columns:1fr;
+
+    text-align:center;
+  }
+
+  .areas-box .section-label{
+    text-align:center;
+  }
+
+  .areas-list{
+    justify-content:center;
+  }
+
+  .areas-list span{
+    padding-left:0;
+  }
+
+  .areas-list span::before{
+    display:none;
+  }
+
+
+  /* FOOTER */
+
+  .footer-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+
+  /* SERVICE DETAILS */
+
+  .service-detail-grid{
+    grid-template-columns:1fr;
+  }
+
+  .service-detail-image{
+    min-height:360px;
   }
 
 }
 
 
-/* Very small phones */
+/* =========================================================
+   22. PHONE
+   ========================================================= */
 
-@media(max-width:420px){
+@media(max-width:600px){
 
-  .service-card-image{
-    height:205px;
+  section{
+    padding:58px 18px;
+  }
+
+  .top-bar{
+    padding:8px 15px;
+
+    font-size:12px;
+  }
+
+
+  /* HEADER */
+
+  .nav-wrap{
+    padding-left:16px;
+    padding-right:16px;
+  }
+
+  .logo img{
+    height:62px;
+  }
+
+  nav{
+    width:100%;
+
+    gap:9px 14px;
+  }
+
+  nav a{
+    font-size:12.5px;
+  }
+
+  nav .quote-btn{
+    width:100%;
+
+    margin-top:5px;
+  }
+
+
+  /* HERO */
+
+  .hero{
+    padding:68px 18px;
+  }
+
+  .company-name{
+    font-size:14px;
+    letter-spacing:2px;
+  }
+
+  .hero h1{
+    font-size:40px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .hero-buttons{
+    width:100%;
+  }
+
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-secondary{
+    width:100%;
+  }
+
+  .hero-features{
+    gap:10px 18px;
+  }
+
+
+  /* SECTION HEADINGS */
+
+  .section-title{
+    font-size:30px;
+  }
+
+  .section-subtitle{
+    margin-bottom:34px;
+
+    font-size:16px;
+  }
+
+
+  /* SERVICES */
+
+  .services-section .services-grid{
+    grid-template-columns:1fr;
+
+    gap:20px;
+  }
+
+  .services-section .service-card-image{
+    height:235px;
+    flex-basis:235px;
+  }
+
+  .services-section .service-card-content{
+    padding:22px;
+  }
+
+
+  /* PROMISE */
+
+  .promise-image{
+    min-height:280px;
+  }
+
+  .promise-content{
+    padding:28px 22px;
+  }
+
+  .values-grid{
+    grid-template-columns:1fr;
+  }
+
+
+  /* WHY */
+
+  .why-grid{
+    grid-template-columns:1fr;
+  }
+
+  .why-card{
+    border-right:none !important;
+    border-bottom:1px solid rgba(255,255,255,0.18);
+  }
+
+  .why-card:last-child{
+    border-bottom:none;
+  }
+
+
+  /* AREAS */
+
+  .areas-box{
+    padding:26px 20px;
+  }
+
+  .areas-box h2{
+    font-size:26px;
+  }
+
+
+  /* TESTIMONIALS */
+
+  .testimonial-grid{
+    grid-template-columns:1fr;
+  }
+
+
+  /* FOOTER */
+
+  .footer-grid{
+    grid-template-columns:1fr;
+
+    gap:28px;
+
+    text-align:center;
+  }
+
+  .footer-logo{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+
+  /* PAGE HERO */
+
+  .page-hero{
+    padding:65px 18px;
+  }
+
+  .page-hero h1{
+    font-size:36px;
+  }
+
+  .page-hero p{
+    font-size:16px;
+  }
+
+
+  /* SERVICE DETAIL */
+
+  .service-detail-image{
+    min-height:280px;
+  }
+
+  .service-detail-content{
+    padding:28px 22px;
+  }
+
+  .service-detail-content h2{
+    font-size:28px;
+  }
+
+}
+
+
+/* =========================================================
+   23. VERY SMALL PHONES
+   ========================================================= */
+
+@media(max-width:400px){
+
+  .hero h1{
+    font-size:35px;
+  }
+
+  .services-section .service-card-image{
+    height:210px;
+    flex-basis:210px;
+  }
+
+  .btn-primary,
+  .btn-secondary{
+    padding-left:18px;
+    padding-right:18px;
   }
 
 }
