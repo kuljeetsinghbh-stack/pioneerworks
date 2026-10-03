@@ -106,7 +106,7 @@
       margin: 0 auto;
 
       display: grid;
-      grid-template-columns: minmax(0, 1.65fr) minmax(290px, 0.8fr);
+      grid-template-columns: minmax(0,1.65fr) minmax(290px,0.8fr);
       gap: 32px;
 
       align-items: start;
@@ -259,7 +259,7 @@
 
 
     /* =========================================================
-       SUBMIT BUTTON
+       SUBMIT
        ========================================================= */
 
     .quote-submit {
@@ -285,15 +285,12 @@
       box-shadow: 0 8px 20px rgba(207,152,38,0.22);
 
       transition:
-        background 0.2s ease,
-        border-color 0.2s ease,
         transform 0.2s ease,
-        box-shadow 0.2s ease;
+        box-shadow 0.2s ease,
+        background 0.2s ease;
     }
 
     .quote-submit button:hover {
-      background: var(--gold-dark);
-      border-color: var(--gold-dark);
       transform: translateY(-2px);
       box-shadow: 0 11px 24px rgba(207,152,38,0.30);
     }
@@ -335,6 +332,9 @@
       font-size: 14px;
       line-height: 1.7;
     }
+
+
+    /* CONTACT CARD */
 
     .quote-contact-card {
       background:
@@ -378,7 +378,7 @@
 
 
     /* =========================================================
-       SERVICES LIST
+       SERVICES WE COVER
        ========================================================= */
 
     .quote-service-list {
@@ -404,38 +404,70 @@
       font-weight: 900;
     }
 
+    .other-service-box {
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+    }
+
+    .other-service-box strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--deep-blue);
+      font-size: 14px;
+    }
+
+    .other-service-box p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .other-service-box a {
+      color: var(--blue);
+      font-weight: 800;
+    }
+
+    .other-service-box a:hover {
+      text-decoration: underline;
+    }
+
 
     /* =========================================================
-       PREMIUM QUOTE PROCESS
+       NEW PROCESS SECTION
+       NO NUMBERS
        ========================================================= */
 
-    .quote-process {
+    .pw-quote-journey-section {
       padding: 90px 24px 100px;
       background: #ffffff;
     }
 
-    .quote-journey {
+    .pw-quote-journey {
       position: relative;
 
+      width: 100%;
       max-width: 1200px;
-      margin: 55px auto 0;
+
+      margin: 58px auto 0;
 
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(4,minmax(0,1fr));
       gap: 26px;
     }
 
 
-    /* GOLD CONNECTION LINE */
+    /* SUBTLE GOLD CONNECTION */
 
-    .quote-journey::before {
+    .pw-quote-journey::before {
       content: "";
 
       position: absolute;
 
-      top: 37px;
-      left: 10%;
-      right: 10%;
+      top: 45px;
+      left: 11%;
+      right: 11%;
 
       height: 1px;
 
@@ -443,8 +475,8 @@
         linear-gradient(
           90deg,
           transparent,
-          rgba(207,152,38,0.65) 12%,
-          rgba(207,152,38,0.65) 88%,
+          rgba(207,152,38,0.55) 10%,
+          rgba(207,152,38,0.55) 90%,
           transparent
         );
 
@@ -452,71 +484,88 @@
     }
 
 
-    /* PROCESS CARD */
+    /* CARD */
 
-    .journey-card {
+    .pw-journey-card {
       position: relative;
       z-index: 1;
 
-      min-height: 270px;
+      min-height: 285px;
 
-      padding: 0 25px 30px;
+      padding: 0 26px 32px;
 
       text-align: center;
 
       background: #ffffff;
 
       border: 1px solid #e2e8f0;
-      border-radius: 14px;
+      border-radius: 15px;
 
       box-shadow:
-        0 10px 30px rgba(0,31,77,0.055);
+        0 10px 32px rgba(0,31,77,0.055);
 
       transition:
         transform 0.25s ease,
-        box-shadow 0.25s ease,
-        border-color 0.25s ease;
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
     }
 
-    .journey-card:hover {
+    .pw-journey-card:hover {
       transform: translateY(-4px);
 
       border-color: rgba(207,152,38,0.45);
 
       box-shadow:
-        0 16px 38px rgba(0,31,77,0.09);
+        0 17px 38px rgba(0,31,77,0.09);
     }
 
 
-    /* PROCESS ICON */
+    /* ICON HOLDER */
 
-    .journey-icon {
-      width: 74px;
-      height: 74px;
+    .pw-journey-icon {
+      position: relative;
 
-      margin: -1px auto 26px;
+      width: 90px;
+      height: 90px;
+
+      margin: 0 auto 24px;
 
       display: flex;
       align-items: center;
       justify-content: center;
 
       color: var(--gold);
-
       background: #ffffff;
-
-      border-bottom: 2px solid var(--gold);
     }
 
-    .journey-icon svg {
-      width: 31px;
-      height: 31px;
+    .pw-journey-icon::after {
+      content: "";
+
+      position: absolute;
+
+      bottom: 7px;
+      left: 50%;
+
+      width: 34px;
+      height: 2px;
+
+      transform: translateX(-50%);
+
+      background: var(--gold);
+
+      border-radius: 2px;
+    }
+
+    .pw-journey-icon svg {
+      width: 34px;
+      height: 34px;
     }
 
 
-    /* PROCESS TEXT */
+    /* TEXT */
 
-    .journey-card h3 {
-      margin: 0 0 14px;
+    .pw-journey-card h3 {
+      margin: 0 0 13px;
 
       color: var(--deep-blue);
 
@@ -526,7 +575,7 @@
       line-height: 1.3;
     }
 
-    .journey-card p {
+    .pw-journey-card p {
       margin: 0;
 
       color: var(--muted);
@@ -536,9 +585,9 @@
     }
 
 
-    /* SMALL GOLD DETAIL */
+    /* BOTTOM GOLD DETAIL */
 
-    .journey-card::after {
+    .pw-journey-card::after {
       content: "";
 
       position: absolute;
@@ -546,7 +595,7 @@
       bottom: 0;
       left: 50%;
 
-      width: 42px;
+      width: 44px;
       height: 3px;
 
       transform: translateX(-50%);
@@ -568,15 +617,15 @@
       }
 
       .quote-sidebar {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
       }
 
-      .quote-journey {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 32px 24px;
+      .pw-quote-journey {
+        grid-template-columns: repeat(2,1fr);
+        gap: 30px 24px;
       }
 
-      .quote-journey::before {
+      .pw-quote-journey::before {
         display: none;
       }
 
@@ -624,19 +673,19 @@
         grid-template-columns: 1fr;
       }
 
-      .quote-process {
+      .pw-quote-journey-section {
         padding: 65px 18px 75px;
       }
 
-      .quote-journey {
+      .pw-quote-journey {
         grid-template-columns: 1fr;
         max-width: 460px;
         margin-top: 42px;
       }
 
-      .journey-card {
+      .pw-journey-card {
         min-height: auto;
-        padding: 0 24px 28px;
+        padding: 0 24px 29px;
       }
 
       .quote-submit button {
@@ -804,7 +853,9 @@
       <div class="quote-layout">
 
 
-        <!-- FORM -->
+        <!-- =====================================================
+             FORM
+             ===================================================== -->
 
         <div class="quote-form-card">
 
@@ -1014,8 +1065,12 @@
                     Multiple Services
                   </option>
 
-                  <option value="Other / Not Sure">
-                    Other / Not Sure
+                  <option value="Something Else">
+                    Something Else
+                  </option>
+
+                  <option value="Not Sure">
+                    Not Sure
                   </option>
 
                 </select>
@@ -1191,8 +1246,9 @@
                 ></textarea>
 
                 <div class="field-note">
-                  You can include approximate measurements or other
-                  useful details if you already know them.
+                  If the service you need is not listed above,
+                  describe it here and we can discuss whether Pioneer Works
+                  may be able to help.
                 </div>
 
               </div>
@@ -1297,29 +1353,49 @@
           </div>
 
 
-          <!-- SERVICES -->
+          <!-- SERVICES WE COVER -->
 
           <div class="quote-side-card">
 
             <h3>
-              Services
+              Services We Cover
             </h3>
 
             <p>
-              Request a quote for one service or tell us about a
-              project involving several areas of your property.
+              You can request a quote for one service or tell us
+              about work involving several areas of your property.
             </p>
 
             <ul class="quote-service-list">
 
               <li>Painting</li>
+
               <li>Fencing</li>
+
               <li>Decks</li>
+
               <li>Property Maintenance</li>
+
               <li>Home Improvements</li>
+
               <li>Handyman Services</li>
 
             </ul>
+
+
+            <div class="other-service-box">
+
+              <strong>
+                Something else in mind?
+              </strong>
+
+              <p>
+                If the work you need isn’t listed here, please
+                <a href="contact.html">get in touch</a>.
+                We may still be able to help or discuss what’s possible.
+              </p>
+
+            </div>
 
           </div>
 
@@ -1354,10 +1430,11 @@
 
 
     <!-- =========================================================
-         ELEGANT QUOTE PROCESS
+         QUOTE PROCESS
+         COMPLETELY NUMBER-FREE
          ========================================================= -->
 
-    <section class="quote-process">
+    <section class="pw-quote-journey-section">
 
       <div class="container">
 
@@ -1366,36 +1443,37 @@
         </div>
 
         <h2 class="section-title">
-          A Simple, Professional Quote Process
+          A Straightforward Quote Process
         </h2>
 
         <p class="section-subtitle">
           Tell us about your project and we’ll take it from there.
-          Clear communication, practical next steps and no unnecessary complexity.
+          Clear communication and practical next steps from your
+          first enquiry onwards.
         </p>
 
 
-        <div class="quote-journey">
+        <div class="pw-quote-journey">
 
 
           <!-- SEND DETAILS -->
 
-          <div class="journey-card">
+          <article class="pw-journey-card">
 
-            <div class="journey-icon" aria-hidden="true">
+            <div class="pw-journey-icon" aria-hidden="true">
 
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="1.6"
+                stroke-width="1.5"
                 stroke-linecap="round"
                 stroke-linejoin="round"
               >
-                <path d="M9 5h6"></path>
-                <path d="M9 9h6"></path>
-                <path d="M9 13h4"></path>
-                <path d="M5 3h14v18H5z"></path>
+                <rect x="5" y="3" width="14" height="18" rx="1"></rect>
+                <path d="M9 7h6"></path>
+                <path d="M9 11h6"></path>
+                <path d="M9 15h4"></path>
               </svg>
 
             </div>
@@ -1409,20 +1487,20 @@
               location and the type of work you need.
             </p>
 
-          </div>
+          </article>
 
 
-          <!-- TELL US ABOUT WORK -->
+          <!-- PROJECT -->
 
-          <div class="journey-card">
+          <article class="pw-journey-card">
 
-            <div class="journey-icon" aria-hidden="true">
+            <div class="pw-journey-icon" aria-hidden="true">
 
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="1.6"
+                stroke-width="1.5"
                 stroke-linecap="round"
                 stroke-linejoin="round"
               >
@@ -1436,30 +1514,30 @@
             </h3>
 
             <p>
-              Share useful details about your property,
-              the area involved and what you would like completed.
+              Share useful details about your property, the area
+              involved and what you would like completed.
             </p>
 
-          </div>
+          </article>
 
 
           <!-- REVIEW -->
 
-          <div class="journey-card">
+          <article class="pw-journey-card">
 
-            <div class="journey-icon" aria-hidden="true">
+            <div class="pw-journey-icon" aria-hidden="true">
 
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="1.6"
+                stroke-width="1.5"
                 stroke-linecap="round"
                 stroke-linejoin="round"
               >
-                <circle cx="11" cy="11" r="6"></circle>
-                <path d="m16 16 4 4"></path>
-                <path d="m8.5 11 1.7 1.7 3.3-3.4"></path>
+                <circle cx="10.5" cy="10.5" r="6"></circle>
+                <path d="M15 15l5 5"></path>
+                <path d="M8 10.5l1.7 1.7 3.4-3.5"></path>
               </svg>
 
             </div>
@@ -1470,28 +1548,28 @@
 
             <p>
               We review the information you provide and contact
-              you if anything further is needed.
+              you if any further details are needed.
             </p>
 
-          </div>
+          </article>
 
 
-          <!-- DISCUSS -->
+          <!-- DISCUSSION -->
 
-          <div class="journey-card">
+          <article class="pw-journey-card">
 
-            <div class="journey-icon" aria-hidden="true">
+            <div class="pw-journey-icon" aria-hidden="true">
 
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="1.6"
+                stroke-width="1.5"
                 stroke-linecap="round"
                 stroke-linejoin="round"
               >
-                <path d="M21 15a4 4 0 0 1-4 4H9l-5 3v-7a7 7 0 0 1-1-3.5A6.5 6.5 0 0 1 9.5 5h5A6.5 6.5 0 0 1 21 11.5z"></path>
-                <path d="M8 11h8"></path>
+                <path d="M20 15a4 4 0 0 1-4 4H9l-5 3v-7a7 7 0 0 1-1-3.5A6.5 6.5 0 0 1 9.5 5h4A6.5 6.5 0 0 1 20 11.5z"></path>
+                <path d="M8 11h7"></path>
                 <path d="M8 14h5"></path>
               </svg>
 
@@ -1506,7 +1584,7 @@
               the quote and the appropriate next steps with you.
             </p>
 
-          </div>
+          </article>
 
 
         </div>
@@ -1517,7 +1595,7 @@
 
 
     <!-- =========================================================
-         FINAL CALL TO ACTION
+         FINAL CTA
          ========================================================= -->
 
     <section class="cta">
@@ -1529,8 +1607,8 @@
         </h2>
 
         <p>
-          Contact Pioneer Works for general questions about our
-          property services or the areas we cover.
+          Contact Pioneer Works if you have a question about your
+          project, our services or the areas we cover.
         </p>
 
 
